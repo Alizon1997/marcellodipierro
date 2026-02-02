@@ -1,0 +1,95 @@
+import React, { useEffect, useState } from 'react';
+import { ArrowRight, Calendar, User, Loader2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { MOCK_POSTS, BlogPost } from './mockData';
+// import { client, urlFor } from '../../lib/sanity'; // Commented out for now
+
+const BlogList: React.FC = () => {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate network delay
+    setTimeout(() => {
+      setPosts(MOCK_POSTS);
+      setLoading(false);
+    }, 800);
+  }, []);
+
+  const formatDate = (dateString: string) => {
+    if (!dateString) return '';
+    return new Date(dateString).toLocaleDateString('it-IT', { day: 'numeric', month: 'short', year: 'numeric' });
+  };
+
+  return (
+    <div className="pt-32 pb-20 bg-brand-dark min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Storm X <span className="text-brand-accent">Insights</span>
+          </h1>
+          <p className="text-brand-muted text-lg max-w-2xl mx-auto">
+            Analisi, strategie e breakdown tecnici sul mondo del B2B Outbound.
+            <br />Nessuna teoria, solo tattiche testate sul campo.
+          </p>
+        </div>
+
+        {/* Loading State */}
+        {loading && (
+          <div className="flex justify-center items-center py-20">
+            <Loader2 className="w-8 h-8 text-brand-accent animate-spin" />
+          </div>
+        )}
+
+        {/* Grid */}
+        {!loading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <Link to={`/blog/${post.slug.current}`} key={post._id} className="group flex flex-col bg-brand-surface border border-brand-border rounded-2xl overflow-hidden hover:border-brand-accent/50 transition-all duration-300 hover:shadow-glow">
+
+                {/* Image */}
+                <div className="relative aspect-video overflow-hidden bg-brand-surfaceHighlight">
+                  <img
+                    src={post.mainImage}
+                    alt={post.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  />
+
+                  {post.categories && post.categories.length > 0 && (
+                    <div className="absolute top-4 left-4 bg-brand-dark/80 backdrop-blur border border-brand-border px-3 py-1 rounded-full text-xs font-mono text-brand-accent uppercase tracking-wider">
+                      {post.categories[0]}
+                    </div>
+                  )}
+                </div>
+
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center space-x-4 text-xs text-brand-muted mb-3 font-mono">
+                    <span className="flex items-center"><User className="w-3 h-3 mr-1" /> {post.authorName || 'Storm X'}</span>
+                    <span className="flex items-center"><Calendar className="w-3 h-3 mr-1" /> {formatDate(post.publishedAt)}</span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-accent transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-sm text-brand-muted line-clamp-3 mb-6 flex-grow">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="flex items-center text-brand-accent text-sm font-bold group-hover:translate-x-2 transition-transform duration-300">
+                    Leggi Articolo <ArrowRight className="w-4 h-4 ml-2" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default BlogList;
