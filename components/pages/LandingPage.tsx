@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../sections/Hero';
+import LogoCloud from '../sections/LogoCloud';
 import SilentKiller from '../sections/SilentKiller';
 import ParadigmShift from '../sections/ParadigmShift';
 import HowItWorks from '../sections/HowItWorks';
@@ -40,6 +41,9 @@ const LandingPage: React.FC = () => {
       <DynamicMeta />
       {/* 1. Hero: Result, not Method */}
       <Hero />
+
+      {/* 1.5. Logo Cloud: Social Proof */}
+      <LogoCloud />
 
       {/* 2. Pain Agitation: The Sales Paradox */}
       <Reveal>
