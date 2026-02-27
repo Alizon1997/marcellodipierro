@@ -43,7 +43,7 @@ set search_path = public
 as $$
 declare
   _webhook_secret text;
-  _function_url   text := 'https://kmfyyrkynlbskkylpaso.supabase.co/functions/v1/notify-new-lead';
+  _function_url   text := 'https://buomcjwazcerojfkarub.supabase.co/functions/v1/notify-new-lead';
 begin
   -- Read the webhook secret we stored via: supabase secrets set WEBHOOK_SECRET=...
   _webhook_secret := current_setting('app.settings.webhook_secret', true);

@@ -102,7 +102,7 @@ Deno.serve(async (req: Request) => {
         <!-- CTA -->
         <tr>
           <td style="padding:24px 36px 36px;text-align:center;">
-            <a href="https://supabase.com/dashboard/project/kmfyyrkynlbskkylpaso/editor"
+            <a href="https://supabase.com/dashboard/project/buomcjwazcerojfkarub/editor"
                style="display:inline-block;background:#FF5500;color:#ffffff;padding:13px 30px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:-.2px;">
               Vedi tutti i lead &rarr;
             </a>

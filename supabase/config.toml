@@ -1,8 +1,8 @@
 # Supabase local config — Storm X Digital
-# Project ref: kmfyyrkynlbskkylpaso
+# Project ref: buomcjwazcerojfkarub
 
 [project]
-id = "kmfyyrkynlbskkylpaso"
+id = "buomcjwazcerojfkarub"
 
 [api]
 port = 54321

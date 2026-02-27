@@ -14,7 +14,7 @@
  *
  * You will be prompted for three things:
  *   • Supabase Personal Access Token  → supabase.com/dashboard/account/tokens
- *   • Service Role Secret Key         → supabase.com/dashboard/project/kmfyyrkynlbskkylpaso/settings/api
+ *   • Service Role Secret Key         → supabase.com/dashboard/project/buomcjwazcerojfkarub/settings/api
  *   • Resend API Key                  → resend.com/api-keys  (free account, 100 emails/day)
  * ─────────────────────────────────────────────────────────────────────────────
  */
@@ -26,7 +26,7 @@ const crypto = require('crypto');
 const readline = require('readline');
 
 // ── Project constants ─────────────────────────────────────────────────────────
-const PROJECT_REF  = 'kmfyyrkynlbskkylpaso';
+const PROJECT_REF  = 'buomcjwazcerojfkarub';
 const SUPABASE_URL = `https://${PROJECT_REF}.supabase.co`;
 const NOTIFY_EMAIL = 'marcello@stormxdigital.com'; // change if needed
 // ─────────────────────────────────────────────────────────────────────────────
@@ -192,7 +192,7 @@ async function main() {
   console.log('  1) Personal Access Token:');
   console.log('     → https://supabase.com/dashboard/account/tokens\n');
   console.log('  2) Service Role Secret Key:');
-  console.log('     → https://supabase.com/dashboard/project/kmfyyrkynlbskkylpaso/settings/api\n');
+  console.log('     → https://supabase.com/dashboard/project/buomcjwazcerojfkarub/settings/api\n');
   console.log('  3) Resend API Key (free account → 100 emails/day):');
   console.log('     → https://resend.com/api-keys\n');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
@@ -239,7 +239,7 @@ async function main() {
   console.log('                  → Edge Function `notify-new-lead`');
   console.log('                    → Resend → Email to ' + NOTIFY_EMAIL);
   console.log('');
-  console.log('  View leads: https://supabase.com/dashboard/project/kmfyyrkynlbskkylpaso/editor');
+  console.log('  View leads: https://supabase.com/dashboard/project/buomcjwazcerojfkarub/editor');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
 }
 
