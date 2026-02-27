@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 
-const partners = [
-    { name: 'Profood', logo: 'https://framerusercontent.com/images/8HpawhqwgsiFDddewHyJLUxKA.png', result: '85+ meeting B2B' },
-    { name: 'Reebok', logo: 'https://framerusercontent.com/images/JRTEXah04sXYGM5CsTPhKV9Cj8U.png', result: '120+ qualified contacts' },
+const partnersData = (lang: string) => [
+    { name: 'Profood', logo: 'https://framerusercontent.com/images/8HpawhqwgsiFDddewHyJLUxKA.png', result: lang === 'it' ? '85+ meeting B2B' : '85+ B2B meetings' },
+    { name: 'Reebok', logo: 'https://framerusercontent.com/images/JRTEXah04sXYGM5CsTPhKV9Cj8U.png', result: lang === 'it' ? '120+ contatti qualificati' : '120+ qualified contacts' },
     { name: 'Wrangler', logo: 'https://framerusercontent.com/images/OZxA1obb03stTzUPP2TbXwpEyB0.png', result: '€150K pipeline' },
-    { name: 'Lee', logo: 'https://framerusercontent.com/images/Vt1XzubbOMfFXSqeYHhkcDQcc.png', result: '45 meetings in 60 days' },
-    { name: 'Brands Cosmos', logo: 'https://framerusercontent.com/images/oXeRjyYqNj7Jr2mLoL9rqR5skIA.png', result: '3x ROI in 90 days' },
-    { name: 'Reliance Medical', logo: 'https://framerusercontent.com/images/BJ6Fr0bDLb18tVizMnSVt7uYzSU.png', result: '200+ qualified leads' },
+    { name: 'Lee', logo: 'https://framerusercontent.com/images/Vt1XzubbOMfFXSqeYHhkcDQcc.png', result: lang === 'it' ? '45 meeting in 60 giorni' : '45 meetings in 60 days' },
+    { name: 'Brands Cosmos', logo: 'https://framerusercontent.com/images/oXeRjyYqNj7Jr2mLoL9rqR5skIA.png', result: lang === 'it' ? '3x ROI in 90 giorni' : '3x ROI in 90 days' },
+    { name: 'Reliance Medical', logo: 'https://framerusercontent.com/images/BJ6Fr0bDLb18tVizMnSVt7uYzSU.png', result: lang === 'it' ? '200+ lead qualificati' : '200+ qualified leads' },
 ];
 
 const LogoCloud: React.FC = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const { language } = useLanguage();
 
+    const partners = partnersData(language);
     // Double the logos for seamless infinite scroll
     const allPartners = [...partners, ...partners];
 

@@ -55,7 +55,7 @@ const FeaturedCaseStudy: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-white font-bold text-sm mb-1">Isolcore — CEO Interview</p>
+                    <p className="text-white font-bold text-sm mb-1">{language === 'it' ? 'Isolcore — Intervista CEO' : 'Isolcore — CEO Interview'}</p>
                     <p className="text-white/40 text-xs font-mono">{language === 'it' ? 'Disponibile su richiesta' : 'Available on request'}</p>
                   </div>
                 </div>

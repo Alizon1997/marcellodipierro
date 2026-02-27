@@ -7,12 +7,14 @@ import { useModal } from '../../context/ModalContext';
 import { PortableText } from '@portabletext/react';
 import { BlogPost as BlogPostType } from './mockData';
 import { client, urlFor } from '../../lib/sanity';
+import { useLanguage } from '../../context/LanguageContext';
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams();
   const { openModal } = useModal();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [loading, setLoading] = useState(true);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -45,7 +47,7 @@ const BlogPost: React.FC = () => {
 
   const formatDate = (dateString: string) => {
     if (!dateString) return '';
-    return new Date(dateString).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+    return new Date(dateString).toLocaleDateString(language === 'it' ? 'it-IT' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' });
   };
 
   const ptComponents = {
@@ -99,8 +101,8 @@ const BlogPost: React.FC = () => {
   if (!post) {
     return (
       <div className="pt-32 pb-20 bg-brand-dark min-h-screen text-center px-4">
-        <h1 className="text-brand-text text-2xl mb-4">Articolo non trovato</h1>
-        <Link to="/blog" className="text-brand-accent hover:underline">Torna al Blog</Link>
+        <h1 className="text-brand-text text-2xl mb-4">{language === 'it' ? 'Articolo non trovato' : 'Article not found'}</h1>
+        <Link to="/blog" className="text-brand-accent hover:underline">{language === 'it' ? 'Torna al Blog' : 'Back to Blog'}</Link>
       </div>
     );
   }
@@ -122,7 +124,7 @@ const BlogPost: React.FC = () => {
 
           {/* Back Link */}
           <Link to="/blog" className="inline-flex items-center text-brand-muted hover:text-brand-accent mb-8 text-sm transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" /> Torna al Blog
+            <ArrowLeft className="w-4 h-4 mr-2" /> {language === 'it' ? 'Torna al Blog' : 'Back to Blog'}
           </Link>
 
           {/* Header */}
@@ -134,7 +136,7 @@ const BlogPost: React.FC = () => {
                 </span>
               )}
               <span className="flex items-center text-brand-muted">
-                <Clock className="w-3 h-3 mr-1" /> 5 MIN READ
+                <Clock className="w-3 h-3 mr-1" /> {language === 'it' ? '5 MIN DI LETTURA' : '5 MIN READ'}
               </span>
             </div>
 
@@ -155,7 +157,7 @@ const BlogPost: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-brand-text text-sm font-bold">{post.authorName || 'Storm X Team'}</p>
-                  <p className="text-brand-muted text-xs">Author</p>
+                  <p className="text-brand-muted text-xs">{language === 'it' ? 'Autore' : 'Author'}</p>
                 </div>
               </div>
               <p className="text-brand-muted text-sm">{formatDate(post.publishedAt)}</p>
@@ -176,12 +178,12 @@ const BlogPost: React.FC = () => {
           {/* CTA Box */}
           <div className="mt-16 bg-brand-surface border border-brand-border rounded-2xl p-8 text-center relative overflow-hidden group hover:border-brand-accent/50 transition-colors shadow-sm">
             <div className="absolute top-0 left-0 w-full h-1 bg-brand-accent"></div>
-            <h3 className="text-2xl font-bold text-brand-text mb-4">Vuoi applicare questo sistema alla tua azienda?</h3>
+            <h3 className="text-2xl font-bold text-brand-text mb-4">{language === 'it' ? 'Vuoi applicare questo sistema alla tua azienda?' : 'Want to apply this system to your business?'}</h3>
             <p className="text-brand-muted mb-8 max-w-lg mx-auto">
-              Non perdere tempo a fare A/B testing da solo. Il nostro team ha già inviato milioni di email e sa cosa funziona.
+              {language === 'it' ? 'Non perdere tempo a fare A/B testing da solo. Il nostro team ha già inviato milioni di email e sa cosa funziona.' : "Don't waste time A/B testing alone. Our team has already sent millions of emails and knows what works."}
             </p>
             <Button onClick={openModal} className="shadow-glow">
-              Richiedi una Strategia Personalizzata
+              {language === 'it' ? 'Richiedi una Strategia Personalizzata' : 'Request a Custom Strategy'}
             </Button>
           </div>
 

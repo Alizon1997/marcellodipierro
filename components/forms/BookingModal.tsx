@@ -168,7 +168,7 @@ const BookingModal: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full bg-brand-surface border border-brand-border rounded-lg px-4 py-3 text-brand-text focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-all placeholder:text-brand-muted/30"
-                    placeholder="Mario Rossi"
+                    placeholder={language === 'it' ? 'Mario Rossi' : 'John Smith'}
                   />
                 </div>
                 <div className="space-y-1">
@@ -182,7 +182,7 @@ const BookingModal: React.FC = () => {
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full bg-brand-surface border border-brand-border rounded-lg px-4 py-3 text-brand-text focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-all placeholder:text-brand-muted/30"
-                    placeholder="Azienda Srl"
+                    placeholder={language === 'it' ? 'Azienda Srl' : 'Company Ltd'}
                   />
                 </div>
               </div>
@@ -213,7 +213,7 @@ const BookingModal: React.FC = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full bg-brand-surface border border-brand-border rounded-lg px-4 py-3 text-brand-text focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none transition-all placeholder:text-brand-muted/30"
-                  placeholder="+39 333 ..."
+                  placeholder={language === 'it' ? '+39 333 ...' : '+1 555 ...'}
                 />
               </div>
 

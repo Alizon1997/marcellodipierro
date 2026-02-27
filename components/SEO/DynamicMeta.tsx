@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface SectionSEO {
   id: string;
@@ -7,49 +8,24 @@ interface SectionSEO {
   description: string;
 }
 
-// Configuration for each section's SEO data
-const SEO_CONFIG: SectionSEO[] = [
-  {
-    id: 'hero',
-    title: 'Storm X Digital | B2B Outbound Sales Engine',
-    description: 'We build your outbound pipeline in 90 days — 60+ qualified meetings guaranteed, zero hiring risk. You close deals, we handle prospecting.'
-  },
-  {
-    id: 'problema',
-    title: 'The Silent Revenue Killer | Storm X Digital',
-    description: 'Your sales team wastes 70% of their time on data entry instead of closing. Discover the Seller\'s Paradox holding back your pipeline.'
-  },
-  {
-    id: 'metodo',
-    title: 'Il Metodo: 4 Step Scientifici | Storm X Digital',
-    description: 'Niente improvvisazione. Un protocollo in 4 fasi per trasformare un estraneo in un appuntamento qualificato.'
-  },
-  {
-    id: 'processo',
-    title: 'Pilot 90 Giorni: Risk Free | Storm X Digital',
-    description: 'Setup, Test, Scale. Un programma di validazione di 90 giorni per stressare il tuo mercato.'
-  },
-  {
-    id: 'case-studies',
-    title: 'Casi Studio & Risultati | Storm X Digital',
-    description: 'Strategie reali, risultati misurabili. Vedi come abbiamo aiutato aziende B2B a scalare.'
-  },
-  {
-    id: 'offerta',
-    title: 'Pricing & Offerta Pilot | Storm X Digital',
-    description: 'Meno del costo di uno stagista. La potenza di un team Senior. Scopri i costi del Pilot.'
-  },
-  {
-    id: 'faq',
-    title: 'Domande Frequenti (FAQ) | Storm X Digital',
-    description: 'Dubbi sul cold calling? Risposte trasparenti sul nostro metodo e garanzie.'
-  }
+// Configuration for each section's SEO data — bilingual
+const getSeoConfig = (lang: string): SectionSEO[] => [
+  { id: 'hero', title: 'Storm X Digital | B2B Outbound Sales Engine', description: lang === 'it' ? 'Costruiamo la tua pipeline outbound in 90 giorni — 60+ meeting qualificati garantiti, zero rischio assunzioni.' : 'We build your outbound pipeline in 90 days — 60+ qualified meetings guaranteed, zero hiring risk.' },
+  { id: 'problema', title: lang === 'it' ? 'Il Killer Silenzioso | Storm X Digital' : 'The Silent Revenue Killer | Storm X Digital', description: lang === 'it' ? 'Il tuo team vendita spreca il 70% del tempo in data entry invece di chiudere. Scopri il Paradosso del Venditore.' : 'Your sales team wastes 70% of their time on data entry instead of closing. Discover the Seller\'s Paradox.' },
+  { id: 'metodo', title: lang === 'it' ? 'Il Metodo: 4 Step Scientifici | Storm X Digital' : 'The Method: 4 Scientific Steps | Storm X Digital', description: lang === 'it' ? 'Niente improvvisazione. Un protocollo in 4 fasi per trasformare un estraneo in un appuntamento qualificato.' : 'No improvisation. A 4-phase protocol to turn a stranger into a qualified appointment.' },
+  { id: 'processo', title: lang === 'it' ? 'Pilot 90 Giorni: Risk Free | Storm X Digital' : '90-Day Pilot: Risk Free | Storm X Digital', description: lang === 'it' ? 'Setup, Test, Scale. Un programma di validazione di 90 giorni per stressare il tuo mercato.' : 'Setup, Test, Scale. A 90-day validation program to stress-test your market.' },
+  { id: 'case-studies', title: lang === 'it' ? 'Casi Studio & Risultati | Storm X Digital' : 'Case Studies & Results | Storm X Digital', description: lang === 'it' ? 'Strategie reali, risultati misurabili. Vedi come abbiamo aiutato aziende B2B a scalare.' : 'Real strategies, measurable results. See how we helped B2B companies scale.' },
+  { id: 'offerta', title: lang === 'it' ? 'Pricing & Offerta Pilot | Storm X Digital' : 'Pricing & Pilot Offer | Storm X Digital', description: lang === 'it' ? 'Meno del costo di uno stagista. La potenza di un team Senior. Scopri i costi del Pilot.' : 'Less than an intern\'s cost. The power of a Senior team. Discover Pilot pricing.' },
+  { id: 'faq', title: lang === 'it' ? 'Domande Frequenti (FAQ) | Storm X Digital' : 'Frequently Asked Questions (FAQ) | Storm X Digital', description: lang === 'it' ? 'Dubbi sul cold calling? Risposte trasparenti sul nostro metodo e garanzie.' : 'Doubts about cold calling? Transparent answers about our method and guarantees.' },
 ];
 
 const DynamicMeta: React.FC = () => {
-  const [activeMeta, setActiveMeta] = useState<SectionSEO>(SEO_CONFIG[0]);
+  const { language } = useLanguage();
+  const [activeMeta, setActiveMeta] = useState<SectionSEO>(getSeoConfig('it')[0]);
 
   useEffect(() => {
+    const config = getSeoConfig(language);
+
     const observerOptions = {
       root: null,
       rootMargin: '-50% 0px -50% 0px', // Trigger when section is in the middle of viewport
@@ -59,9 +35,9 @@ const DynamicMeta: React.FC = () => {
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const config = SEO_CONFIG.find(item => item.id === entry.target.id);
-          if (config) {
-            setActiveMeta(config);
+          const match = config.find(item => item.id === entry.target.id);
+          if (match) {
+            setActiveMeta(match);
           }
         }
       });
@@ -70,13 +46,13 @@ const DynamicMeta: React.FC = () => {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     // Observe all configured sections
-    SEO_CONFIG.forEach(item => {
+    config.forEach(item => {
       const element = document.getElementById(item.id);
       if (element) observer.observe(element);
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [language]);
 
   return (
     <Helmet>

@@ -134,7 +134,7 @@ const WhatsAppStrategy: React.FC = () => {
                         <div className="w-4 h-4 bg-[#25D366] rounded-sm flex items-center justify-center"><Smartphone className="w-2 h-2 text-white" /></div>
                         <span className="text-[10px] text-gray-300 uppercase font-bold">WhatsApp</span>
                       </div>
-                      <span className="text-[10px] text-gray-400">Adesso</span>
+                      <span className="text-[10px] text-gray-400">{language === 'it' ? 'Adesso' : 'Now'}</span>
                     </div>
                     <div className="font-bold text-white text-sm">{chat.sender}</div>
                     <div className="text-gray-300 text-xs">{chat.notification}</div>

@@ -59,7 +59,7 @@ const Comparison: React.FC = () => {
                             </div>
                             <div className="text-center mt-4">
                                 <p className="text-xs text-brand-text uppercase font-bold">Storm X</p>
-                                <p className="text-[10px] text-green-500">Risk Free</p>
+                                <p className="text-[10px] text-green-500">{language === 'it' ? 'Senza Rischio' : 'Risk Free'}</p>
                             </div>
                         </div>
                     </div>

@@ -3,10 +3,12 @@ import { ArrowRight, Calendar, User, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { BlogPost } from './mockData';
 import { client, urlFor } from '../../lib/sanity';
+import { useLanguage } from '../../context/LanguageContext';
 
 const BlogList: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -39,7 +41,7 @@ const BlogList: React.FC = () => {
 
   const formatDate = (dateString: string) => {
     if (!dateString) return '';
-    return new Date(dateString).toLocaleDateString('it-IT', { day: 'numeric', month: 'short', year: 'numeric' });
+    return new Date(dateString).toLocaleDateString(language === 'it' ? 'it-IT' : 'en-US', { day: 'numeric', month: 'short', year: 'numeric' });
   };
 
   return (
@@ -51,10 +53,10 @@ const BlogList: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-brand-text mb-6">
             Storm X <span className="text-brand-accent">Insights</span>
           </h1>
-          <p className="text-brand-muted text-lg max-w-2xl mx-auto">
-            Analisi, strategie e breakdown tecnici sul mondo del B2B Outbound.
-            <br />Nessuna teoria, solo tattiche testate sul campo.
-          </p>
+          <p className="text-brand-muted text-lg max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: language === 'it'
+            ? 'Analisi, strategie e breakdown tecnici sul mondo del B2B Outbound.<br />Nessuna teoria, solo tattiche testate sul campo.'
+            : 'Analysis, strategies and technical breakdowns on B2B Outbound.<br />No theory, only battle-tested tactics.'
+          }} />
         </div>
 
         {/* Loading State */}
@@ -108,7 +110,7 @@ const BlogList: React.FC = () => {
                   </p>
 
                   <div className="flex items-center text-brand-accent text-sm font-bold group-hover:translate-x-2 transition-transform duration-300">
-                    Leggi Articolo <ArrowRight className="w-4 h-4 ml-2" />
+                    {language === 'it' ? 'Leggi Articolo' : 'Read Article'} <ArrowRight className="w-4 h-4 ml-2" />
                   </div>
                 </div>
               </Link>
@@ -118,7 +120,7 @@ const BlogList: React.FC = () => {
 
         {!loading && posts.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-brand-muted">Nessun articolo trovato.</p>
+            <p className="text-brand-muted">{language === 'it' ? 'Nessun articolo trovato.' : 'No articles found.'}</p>
           </div>
         )}
       </div>

@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const RadarCanvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const { language } = useLanguage();
+  const languageRef = useRef(language);
+  languageRef.current = language;
 
   // Pause animation when off-screen
   useEffect(() => {
@@ -286,7 +290,7 @@ const RadarCanvas: React.FC = () => {
     const triggerMeeting = () => {
       meetingCount++;
       lastMeetingTime = Date.now();
-      floatingTexts.push(new FloatingText(cx, cy + 160, "+ Meeting Booked"));
+      floatingTexts.push(new FloatingText(cx, cy + 160, languageRef.current === 'it' ? '+ Meeting Prenotato' : '+ Meeting Booked'));
     };
 
     const init = () => {
@@ -409,7 +413,7 @@ const RadarCanvas: React.FC = () => {
 
       ctx.font = '9px "Inter"';
       ctx.fillStyle = '#888888';
-      ctx.fillText("MEETINGS BOOKED", 0, 16);
+      ctx.fillText(languageRef.current === 'it' ? 'MEETING PRENOTATI' : 'MEETINGS BOOKED', 0, 16);
 
       ctx.restore();
     };

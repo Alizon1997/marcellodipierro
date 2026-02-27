@@ -27,69 +27,25 @@ interface ValueItem {
     description: string;
 }
 
-const HUMAN_ASSETS: ValueItem[] = [
-    {
-        icon: UserCheck,
-        title: 'Senior Business Developer',
-        description: 'Professionista dedicato al tuo account (no junior).'
-    },
-    {
-        icon: Brain,
-        title: 'Growth Architect',
-        description: 'Stratega per ottimizzazione campagne settimanale.'
-    },
-    {
-        icon: Phone,
-        title: 'Dominio Multicanale',
-        description: 'Email, LinkedIn, WhatsApp (Focus B2B).'
-    }
-];
-
-const TECH_STACK: ValueItem[] = [
-    {
-        icon: Server,
-        title: 'Setup Infrastruttura',
-        description: 'Domini, SPF/DKIM/DMARC & Warm-up.'
-    },
-    {
-        icon: Database,
-        title: 'B2B Data Engine',
-        description: 'Contatti arricchiti GDPR compliant.'
-    },
-    {
-        icon: ShieldBan,
-        title: 'Exclusion Management',
-        description: 'Protezione clienti attuali e competitor.'
-    },
-    {
-        icon: Calendar,
-        title: 'Calendar Sync',
-        description: 'Booking diretto in agenda.'
-    }
-];
-
-const AI_LAYER: ValueItem[] = [
-    {
-        icon: Sparkles,
-        title: 'Hyper-Personalization',
-        description: 'Script AI adattati psicologicamente.'
-    },
-    {
-        icon: MessageSquareWarning,
-        title: 'Objection Handling',
-        description: 'Gestione automatica obiezioni.'
-    },
-    {
-        icon: HeartHandshake,
-        title: 'Sentiment Analysis',
-        description: 'Ranking intenzioni di acquisto.'
-    },
-    {
-        icon: BarChart3,
-        title: 'Weekly Reporting',
-        description: 'Report settimanale su KPI e strategie.'
-    }
-];
+const getFeatureData = (lang: string) => ({
+    humanAssets: [
+        { icon: UserCheck, title: 'Senior Business Developer', description: lang === 'it' ? 'Professionista dedicato al tuo account (no junior).' : 'Dedicated professional on your account (no juniors).' },
+        { icon: Brain, title: 'Growth Architect', description: lang === 'it' ? 'Stratega per ottimizzazione campagne settimanale.' : 'Strategist for weekly campaign optimization.' },
+        { icon: Phone, title: lang === 'it' ? 'Dominio Multicanale' : 'Multichannel Mastery', description: 'Email, LinkedIn, WhatsApp (B2B Focus).' },
+    ],
+    techStack: [
+        { icon: Server, title: lang === 'it' ? 'Setup Infrastruttura' : 'Infrastructure Setup', description: lang === 'it' ? 'Domini, SPF/DKIM/DMARC & Warm-up.' : 'Domains, SPF/DKIM/DMARC & Warm-up.' },
+        { icon: Database, title: 'B2B Data Engine', description: lang === 'it' ? 'Contatti arricchiti GDPR compliant.' : 'Enriched GDPR-compliant contacts.' },
+        { icon: ShieldBan, title: 'Exclusion Management', description: lang === 'it' ? 'Protezione clienti attuali e competitor.' : 'Current client & competitor protection.' },
+        { icon: Calendar, title: 'Calendar Sync', description: lang === 'it' ? 'Booking diretto in agenda.' : 'Direct booking in your calendar.' },
+    ],
+    aiLayer: [
+        { icon: Sparkles, title: 'Hyper-Personalization', description: lang === 'it' ? 'Script AI adattati psicologicamente.' : 'Psychologically adapted AI scripts.' },
+        { icon: MessageSquareWarning, title: 'Objection Handling', description: lang === 'it' ? 'Gestione automatica obiezioni.' : 'Automated objection management.' },
+        { icon: HeartHandshake, title: 'Sentiment Analysis', description: lang === 'it' ? 'Ranking intenzioni di acquisto.' : 'Purchase intent ranking.' },
+        { icon: BarChart3, title: lang === 'it' ? 'Report Settimanale' : 'Weekly Reporting', description: lang === 'it' ? 'Report settimanale su KPI e strategie.' : 'Weekly KPI and strategy reports.' },
+    ],
+});
 
 const FeatureList: React.FC<{ items: ValueItem[] }> = ({ items }) => (
     <ul className="space-y-4">
@@ -130,6 +86,7 @@ const ComparisonRow: React.FC<{
 const OfferInfrastructure: React.FC = () => {
     const { openModal } = useModal();
     const { language } = useLanguage();
+    const features = getFeatureData(language);
 
     return (
         <section id="offerta" className="py-20 bg-brand-surface border-t border-brand-border">
@@ -138,7 +95,7 @@ const OfferInfrastructure: React.FC = () => {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <span className="inline-block px-3 py-1 bg-brand-accent/10 text-brand-accent text-xs font-bold rounded-full mb-4 tracking-wide uppercase">
-                        Infrastructure as a Service
+                        {language === 'it' ? 'Infrastruttura come Servizio' : 'Infrastructure as a Service'}
                     </span>
                     <h2 className="text-3xl md:text-5xl font-bold text-brand-text mb-4 tracking-tight">
                         {language === 'it' ? "L'Ecosistema Storm X." : 'The Storm X Ecosystem.'}
@@ -159,9 +116,9 @@ const OfferInfrastructure: React.FC = () => {
                             <div className="p-2 bg-blue-500/10 rounded-lg">
                                 <Users className="w-6 h-6 text-blue-500" />
                             </div>
-                            <h3 className="text-lg font-bold text-brand-text">Human Assets</h3>
+                            <h3 className="text-lg font-bold text-brand-text">{language === 'it' ? 'Risorse Umane' : 'Human Assets'}</h3>
                         </div>
-                        <FeatureList items={HUMAN_ASSETS} />
+                        <FeatureList items={features.humanAssets} />
                     </div>
 
                     {/* Column 2: Tech */}
@@ -171,9 +128,9 @@ const OfferInfrastructure: React.FC = () => {
                             <div className="p-2 bg-brand-accent/10 rounded-lg">
                                 <Server className="w-6 h-6 text-brand-accent" />
                             </div>
-                            <h3 className="text-lg font-bold text-brand-text">Proprietary Tech</h3>
+                            <h3 className="text-lg font-bold text-brand-text">{language === 'it' ? 'Tech Proprietaria' : 'Proprietary Tech'}</h3>
                         </div>
-                        <FeatureList items={TECH_STACK} />
+                        <FeatureList items={features.techStack} />
                     </div>
 
                     {/* Column 3: AI */}
@@ -182,9 +139,9 @@ const OfferInfrastructure: React.FC = () => {
                             <div className="p-2 bg-purple-500/10 rounded-lg">
                                 <Brain className="w-6 h-6 text-purple-500" />
                             </div>
-                            <h3 className="text-lg font-bold text-brand-text">AI Intelligence</h3>
+                            <h3 className="text-lg font-bold text-brand-text">{language === 'it' ? 'AI Intelligence' : 'AI Intelligence'}</h3>
                         </div>
-                        <FeatureList items={AI_LAYER} />
+                        <FeatureList items={features.aiLayer} />
                     </div>
                 </div>
 
@@ -199,15 +156,15 @@ const OfferInfrastructure: React.FC = () => {
                     <div className="bg-brand-surface border border-brand-border rounded-xl overflow-hidden shadow-sm">
                         {/* Table Header */}
                         <div className="grid grid-cols-3 bg-brand-surfaceHighlight border-b border-brand-border text-xs font-bold text-brand-muted uppercase tracking-wider">
-                            <div className="p-4">Feature</div>
-                            <div className="p-4 border-l border-brand-border">Internal Hiring</div>
+                            <div className="p-4">{language === 'it' ? 'Caratteristica' : 'Feature'}</div>
+                            <div className="p-4 border-l border-brand-border">{language === 'it' ? 'Assunzione Interna' : 'Internal Hiring'}</div>
                             <div className="p-4 border-l border-brand-border text-brand-accent">Storm X Infra</div>
                         </div>
 
-                        <ComparisonRow feature="Setup Time" internal="3-6 Mesi" stormx="7-14 Giorni" />
-                        <ComparisonRow feature="Cost Stack" internal="~€4k/mo (Salaries + Tools)" stormx="All Inclusive" />
-                        <ComparisonRow feature="Management" internal="High Effort" stormx="Zero Effort (Managed)" />
-                        <ComparisonRow feature="Risk" internal="Stipendi Fissi + TFR" stormx="Rimborso del 50% se non soddisfatti" isLast />
+                        <ComparisonRow feature={language === 'it' ? 'Tempo di Setup' : 'Setup Time'} internal={language === 'it' ? '3-6 Mesi' : '3-6 Months'} stormx={language === 'it' ? '7-14 Giorni' : '7-14 Days'} />
+                        <ComparisonRow feature={language === 'it' ? 'Costo Totale' : 'Cost Stack'} internal={language === 'it' ? '~€4k/mese (Stipendi + Tool)' : '~€4k/mo (Salaries + Tools)'} stormx="All Inclusive" />
+                        <ComparisonRow feature={language === 'it' ? 'Gestione' : 'Management'} internal={language === 'it' ? 'Alto Impegno' : 'High Effort'} stormx={language === 'it' ? 'Zero Effort (Gestito)' : 'Zero Effort (Managed)'} />
+                        <ComparisonRow feature={language === 'it' ? 'Rischio' : 'Risk'} internal={language === 'it' ? 'Stipendi Fissi + TFR' : 'Fixed Salaries + Severance'} stormx={language === 'it' ? 'Rimborso del 50% se non soddisfatti' : '50% refund if not satisfied'} isLast />
                     </div>
                 </div>
 
@@ -215,13 +172,13 @@ const OfferInfrastructure: React.FC = () => {
                 <div className="text-center">
                     <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 text-sm font-medium text-brand-muted">
                         <span className="flex items-center gap-2 px-3 py-1.5 bg-green-50 text-green-700 rounded-full border border-green-100">
-                            <Check className="w-4 h-4" /> No-Show Protection
+                            <Check className="w-4 h-4" /> {language === 'it' ? 'Protezione No-Show' : 'No-Show Protection'}
                         </span>
                         <span className="flex items-center gap-2 px-3 py-1.5 bg-green-50 text-green-700 rounded-full border border-green-100">
-                            <Check className="w-4 h-4" /> Off-Target Guarantee
+                            <Check className="w-4 h-4" /> {language === 'it' ? 'Garanzia Off-Target' : 'Off-Target Guarantee'}
                         </span>
                         <span className="flex items-center gap-2 px-3 py-1.5 bg-green-50 text-green-700 rounded-full border border-green-100">
-                            <Check className="w-4 h-4" /> Nessun Vincolo Lungo
+                            <Check className="w-4 h-4" /> {language === 'it' ? 'Nessun Vincolo Lungo' : 'No Long-Term Lock-in'}
                         </span>
                     </div>
 

@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const FunnelAnimation: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [stats, setStats] = useState({ meetings: 124, nurture: 850 });
   const [isVisible, setIsVisible] = useState(false);
+  const { language } = useLanguage();
+  const languageRef = useRef(language);
+  languageRef.current = language;
 
   // Pause animation when off-screen
   useEffect(() => {
@@ -47,14 +51,9 @@ const FunnelAnimation: React.FC = () => {
       bubbleBg: '#202020'
     };
 
-    const MESSAGES = [
-      "Disponibile martedì?",
-      "Mandami info",
-      "Parliamone",
-      "Ok per la call",
-      "Interessante...",
-      "Fissiamo un meeting"
-    ];
+    const MESSAGES = languageRef.current === 'it'
+      ? ["Disponibile martedì?", "Mandami info", "Parliamone", "Ok per la call", "Interessante...", "Fissiamo un meeting"]
+      : ["Available Tuesday?", "Send me info", "Let's talk", "Ok for the call", "Interesting...", "Let's book a meeting"];
 
     // --- ASSETS (PATHS) ---
     const ICONS = {
@@ -383,7 +382,7 @@ const FunnelAnimation: React.FC = () => {
       <div className="absolute top-4 left-4 z-20">
         <div className="bg-brand-surface border border-brand-border p-3 rounded-lg shadow-xl backdrop-blur-sm">
           <div className="text-[10px] uppercase text-brand-muted font-mono tracking-widest mb-1">
-            Meeting Qualificati
+            {language === 'it' ? 'Meeting Qualificati' : 'Qualified Meetings'}
           </div>
           <div className="text-2xl font-bold text-brand-text flex items-center">
             {stats.meetings}
