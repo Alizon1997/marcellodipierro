@@ -1,0 +1,37 @@
+# Supabase local config — Storm X Digital
+# Project ref: fiyysxfwpewxjtwcmqat
+
+[project]
+id = "fiyysxfwpewxjtwcmqat"
+
+[api]
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[studio]
+port = 54323
+
+[inbucket]
+port = 54324
+
+[storage]
+file_size_limit = "50MiB"
+
+[auth]
+site_url = "https://stormx-digital.vercel.app"
+additional_redirect_urls = []
+jwt_expiry = 3600
+enable_signup = true
+
+[edge_runtime]
+policy = "oneshot"
+
+[functions.notify-new-lead]
+verify_jwt = false
