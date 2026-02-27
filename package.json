@@ -11,15 +11,15 @@
   "dependencies": {
     "@portabletext/react": "3.0.11",
     "@remix-run/router": "1.15.3",
-    "@sanity/client": "6.15.6",
-    "@sanity/image-url": "1.0.2",
+    "@sanity/client": "^7.16.0",
+    "@sanity/image-url": "^2.0.3",
     "@supabase/supabase-js": "2.39.3",
     "lucide-react": "0.454.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-helmet-async": "2.0.4",
     "react-router-dom": "6.22.3",
-    "sanity": "^3.36.0"
+    "sanity": "^4.22.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
