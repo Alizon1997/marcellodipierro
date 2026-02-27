@@ -19,13 +19,13 @@ const Team: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-text mb-4">
             {language === 'it' ? 'L\'Infrastruttura Umana.' : 'Human Infrastructure.'}
           </h2>
           <p className="text-brand-muted text-lg max-w-2xl">
             {language === 'it'
-              ? <>4 Senior. Nessuno stagista. Un unico obiettivo: <span className="text-white font-semibold">Pipeline</span>.</>
-              : <>4 Seniors. No interns. One goal: <span className="text-white font-semibold">Pipeline</span>.</>
+              ? <>4 Senior. Nessuno stagista. Un unico obiettivo: <span className="text-brand-text font-semibold">Pipeline</span>.</>
+              : <>4 Seniors. No interns. One goal: <span className="text-brand-text font-semibold">Pipeline</span>.</>
             }
           </p>
         </div>
@@ -39,7 +39,8 @@ const Team: React.FC = () => {
                 <img
                   src={TEAM_IMAGES[idx]}
                   alt={member.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-95"
+                  className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out transform ${idx === 0 ? 'scale-125 group-hover:scale-110' : 'group-hover:scale-95'
+                    }`}
                 />
 
                 {/* Overlay Gradient (Subtle Vignette) */}
@@ -48,7 +49,7 @@ const Team: React.FC = () => {
                 {/* Linkedin Icon on Hover */}
                 <a
                   href="#"
-                  className="absolute bottom-4 right-4 bg-brand-accent text-white p-2.5 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100 hover:bg-white hover:text-brand-accent shadow-lg"
+                  className="absolute bottom-4 right-4 bg-brand-accent text-brand-text p-2.5 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100 hover:bg-white hover:text-brand-accent shadow-lg"
                   aria-label={`LinkedIn ${member.name}`}
                 >
                   <Linkedin className="w-4 h-4" />
@@ -57,7 +58,7 @@ const Team: React.FC = () => {
 
               {/* Text Info */}
               <div className="relative">
-                <h3 className="text-xl font-bold text-white mb-1 group-hover:text-brand-accent transition-colors duration-300">
+                <h3 className="text-xl font-bold text-brand-text mb-1 group-hover:text-brand-accent transition-colors duration-300">
                   {member.name}
                 </h3>
                 <p className="text-xs font-mono text-brand-accent uppercase tracking-wider font-semibold">

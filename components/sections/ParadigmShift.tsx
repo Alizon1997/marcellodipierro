@@ -17,14 +17,14 @@ const ParadigmShift: React.FC = () => {
             
             {/* Left: Manifesto Copy */}
             <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-brand-text mb-6">
                     {PARADIGM_SHIFT.headline}<br/>
                     <span className="text-brand-accent">{PARADIGM_SHIFT.subheadline}</span>
                 </h2>
                 <div className="space-y-6 text-brand-muted text-lg leading-relaxed">
                     <p>{PARADIGM_SHIFT.desc1}</p>
                     <p>{PARADIGM_SHIFT.desc2}</p>
-                    <div className="p-4 border-l-4 border-brand-accent bg-brand-dark/50 italic text-white/90">
+                    <div className="p-4 border-l-4 border-brand-accent bg-brand-dark/50 italic text-brand-text/90">
                         {PARADIGM_SHIFT.quote}
                     </div>
                 </div>
@@ -41,7 +41,7 @@ const ParadigmShift: React.FC = () => {
                     
                     {/* Step 1: Input */}
                     <div className="flex items-center justify-center">
-                        <div className="bg-brand-surfaceHighlight border border-brand-border px-4 py-2 rounded-full flex items-center space-x-2 text-sm text-white shadow-glow">
+                        <div className="bg-brand-surfaceHighlight border border-brand-border px-4 py-2 rounded-full flex items-center space-x-2 text-sm text-brand-text shadow-glow">
                             <Users className="w-4 h-4 text-brand-accent" />
                             <span>{PARADIGM_SHIFT.flowchart.target}</span>
                         </div>
@@ -60,36 +60,36 @@ const ParadigmShift: React.FC = () => {
                         {/* Node 1: LinkedIn */}
                         <div className="bg-brand-surface border border-brand-border p-3 rounded-xl flex flex-col items-center text-center relative hover:border-brand-accent transition-colors group">
                             <div className="w-8 h-8 bg-brand-surfaceHighlight rounded-full flex items-center justify-center mb-2 group-hover:bg-brand-accent transition-colors">
-                                <Linkedin className="w-4 h-4 text-brand-muted group-hover:text-white" />
+                                <Linkedin className="w-4 h-4 text-brand-muted group-hover:text-brand-text" />
                             </div>
-                            <span className="text-[10px] font-bold text-white mb-0.5">1. {PARADIGM_SHIFT.flowchart.step1}</span>
+                            <span className="text-[10px] font-bold text-brand-text mb-0.5">1. {PARADIGM_SHIFT.flowchart.step1}</span>
                             <span className="text-[9px] text-brand-muted">{PARADIGM_SHIFT.flowchart.step1Desc}</span>
                         </div>
 
                         {/* Node 2: Email */}
                         <div className="bg-brand-surface border border-brand-border p-3 rounded-xl flex flex-col items-center text-center relative hover:border-brand-accent transition-colors group">
                              <div className="w-8 h-8 bg-brand-surfaceHighlight rounded-full flex items-center justify-center mb-2 group-hover:bg-brand-accent transition-colors">
-                                <Mail className="w-4 h-4 text-brand-muted group-hover:text-white" />
+                                <Mail className="w-4 h-4 text-brand-muted group-hover:text-brand-text" />
                             </div>
-                            <span className="text-[10px] font-bold text-white mb-0.5">2. {PARADIGM_SHIFT.flowchart.step2}</span>
+                            <span className="text-[10px] font-bold text-brand-text mb-0.5">2. {PARADIGM_SHIFT.flowchart.step2}</span>
                             <span className="text-[9px] text-brand-muted">{PARADIGM_SHIFT.flowchart.step2Desc}</span>
                         </div>
 
                         {/* Node 3: WhatsApp */}
                         <div className="bg-brand-surface border border-brand-border p-3 rounded-xl flex flex-col items-center text-center relative hover:border-brand-accent transition-colors group">
                              <div className="w-8 h-8 bg-brand-surfaceHighlight rounded-full flex items-center justify-center mb-2 group-hover:bg-brand-accent transition-colors">
-                                <MessageCircle className="w-4 h-4 text-brand-muted group-hover:text-white" />
+                                <MessageCircle className="w-4 h-4 text-brand-muted group-hover:text-brand-text" />
                             </div>
-                            <span className="text-[10px] font-bold text-white mb-0.5">3. {PARADIGM_SHIFT.flowchart.step3}</span>
+                            <span className="text-[10px] font-bold text-brand-text mb-0.5">3. {PARADIGM_SHIFT.flowchart.step3}</span>
                             <span className="text-[9px] text-brand-muted">{PARADIGM_SHIFT.flowchart.step3Desc}</span>
                         </div>
 
                         {/* Node 4: Call */}
                         <div className="bg-brand-surface border border-brand-border p-3 rounded-xl flex flex-col items-center text-center relative hover:border-brand-accent transition-colors group">
                              <div className="w-8 h-8 bg-brand-surfaceHighlight rounded-full flex items-center justify-center mb-2 group-hover:bg-brand-accent transition-colors">
-                                <Phone className="w-4 h-4 text-brand-muted group-hover:text-white" />
+                                <Phone className="w-4 h-4 text-brand-muted group-hover:text-brand-text" />
                             </div>
-                            <span className="text-[10px] font-bold text-white mb-0.5">4. {PARADIGM_SHIFT.flowchart.step4}</span>
+                            <span className="text-[10px] font-bold text-brand-text mb-0.5">4. {PARADIGM_SHIFT.flowchart.step4}</span>
                             <span className="text-[9px] text-brand-muted">{PARADIGM_SHIFT.flowchart.step4Desc}</span>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ const ParadigmShift: React.FC = () => {
                         <div className="bg-brand-accent/10 border border-brand-accent/50 px-6 py-4 rounded-xl flex items-center space-x-3 shadow-glow hover:bg-brand-accent/20 transition-colors">
                             <CalendarCheck className="w-6 h-6 text-brand-accent" />
                             <div className="text-left">
-                                <div className="text-white font-bold text-sm">{PARADIGM_SHIFT.flowchart.outputTitle}</div>
+                                <div className="text-brand-text font-bold text-sm">{PARADIGM_SHIFT.flowchart.outputTitle}</div>
                                 <div className="text-brand-accent text-xs">{PARADIGM_SHIFT.flowchart.outputDesc}</div>
                             </div>
                         </div>

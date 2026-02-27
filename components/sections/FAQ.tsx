@@ -21,7 +21,7 @@ const FAQ: React.FC = () => {
            <div className="inline-flex items-center justify-center p-2 bg-brand-surfaceHighlight rounded-full mb-4 border border-brand-border">
               <HelpCircle className="w-5 h-5 text-brand-accent" />
            </div>
-           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+           <h2 className="text-3xl md:text-4xl font-bold text-brand-text mb-4">
              {language === 'it' ? 'Domande Frequenti' : 'Frequently Asked Questions'}
            </h2>
            <p className="text-brand-muted max-w-2xl mx-auto">
@@ -39,11 +39,11 @@ const FAQ: React.FC = () => {
               className="group bg-brand-surface border border-brand-border rounded-xl overflow-hidden transition-all duration-300 hover:border-brand-accent/30"
             >
               <details className="group [&_summary::-webkit-details-marker]:hidden">
-                <summary className="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-white transition-colors hover:bg-brand-surfaceHighlight/50">
+                <summary className="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-brand-text transition-colors hover:bg-brand-surfaceHighlight/50">
                   <h3 className="font-semibold text-base md:text-lg pr-4">
                     {faq.question}
                   </h3>
-                  <div className="white-space-no-wrap shrink-0 rounded-full border border-brand-border bg-brand-surfaceHighlight p-1.5 text-brand-muted group-open:bg-brand-accent group-open:text-white group-open:border-brand-accent transition-all duration-300">
+                  <div className="white-space-no-wrap shrink-0 rounded-full border border-brand-border bg-brand-surfaceHighlight p-1.5 text-brand-muted group-open:bg-brand-accent group-open:text-brand-text group-open:border-brand-accent transition-all duration-300">
                     <ChevronDown className="h-4 w-4 transition duration-300 group-open:-rotate-180" />
                   </div>
                 </summary>
@@ -61,7 +61,7 @@ const FAQ: React.FC = () => {
         <div className="mt-12 text-center">
             <p className="text-sm text-brand-muted">
                 {language === 'it' ? 'Non trovi la risposta che cerchi?' : 'Can\'t find what you\'re looking for?'}{' '}
-                <span className="text-white hover:text-brand-accent cursor-pointer underline underline-offset-4 transition-colors">
+                <span className="text-brand-text hover:text-brand-accent cursor-pointer underline underline-offset-4 transition-colors">
                     {language === 'it' ? 'Contatta il supporto tecnico' : 'Contact technical support'}
                 </span>.
             </p>

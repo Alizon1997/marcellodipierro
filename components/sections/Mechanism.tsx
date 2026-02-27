@@ -18,7 +18,7 @@ const Mechanism: React.FC = () => {
             <div className="lg:col-span-5">
                 <div className="mb-12">
                     <h2 className="text-xs font-bold font-mono text-brand-accent uppercase tracking-widest mb-3">{MECHANISM_COPY.label}</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    <h3 className="text-3xl md:text-4xl font-bold text-brand-text mb-4">
                         {MECHANISM_COPY.headline}<br className="hidden md:block"/>
                         <span className="text-brand-muted">{MECHANISM_COPY.subheadline}</span>
                     </h3>
@@ -39,7 +39,7 @@ const Mechanism: React.FC = () => {
                         </div>
                         <div>
                             <div className="flex items-center mb-1">
-                                <h4 className="text-lg font-bold text-white mr-3">
+                                <h4 className="text-lg font-bold text-brand-text mr-3">
                                     {phase.title}
                                 </h4>
                                 <span className="text-[10px] font-mono bg-brand-surface border border-brand-border px-2 py-0.5 rounded text-brand-muted uppercase">
@@ -57,7 +57,7 @@ const Mechanism: React.FC = () => {
                 <div className="mt-10 p-4 bg-brand-surface/50 rounded-xl border border-brand-accent/20 flex items-start">
                     <CheckCircle2 className="w-5 h-5 text-brand-accent mr-3 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-brand-text">
-                        <strong className="text-white block mb-1">{MECHANISM_COPY.guaranteeTitle}</strong>
+                        <strong className="text-brand-text block mb-1">{MECHANISM_COPY.guaranteeTitle}</strong>
                         {MECHANISM_COPY.guaranteeDesc}
                     </p>
                 </div>
@@ -78,11 +78,11 @@ const Mechanism: React.FC = () => {
                          <div className="bg-brand-dark/80 backdrop-blur border border-brand-border px-3 py-2 rounded text-xs font-mono">
                             <div className="flex items-center mb-1">
                                 <span className="w-2 h-2 bg-[#FF4B2B] rounded-full mr-2 shadow-[0_0_8px_#FF4B2B]"></span>
-                                <span className="text-white">{MECHANISM_COPY.funnelLegend.hot}</span>
+                                <span className="text-brand-text">{MECHANISM_COPY.funnelLegend.hot}</span>
                             </div>
                             <div className="flex items-center">
                                 <span className="w-2 h-2 bg-[#00E5FF] rounded-full mr-2 shadow-[0_0_8px_#00E5FF]"></span>
-                                <span className="text-white">{MECHANISM_COPY.funnelLegend.nurture}</span>
+                                <span className="text-brand-text">{MECHANISM_COPY.funnelLegend.nurture}</span>
                             </div>
                          </div>
                     </div>

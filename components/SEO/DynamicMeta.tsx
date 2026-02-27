@@ -11,13 +11,13 @@ interface SectionSEO {
 const SEO_CONFIG: SectionSEO[] = [
   {
     id: 'hero',
-    title: 'Storm X Digital | Agenzia Lead Generation B2B',
-    description: 'Sistema di acquisizione clienti B2B multicanale per PMI. Validazione scientifica in 90 giorni.'
+    title: 'Storm X Digital | B2B Outbound Sales Engine',
+    description: 'We build your outbound pipeline in 90 days — 60+ qualified meetings guaranteed, zero hiring risk. You close deals, we handle prospecting.'
   },
   {
     id: 'problema',
-    title: 'Stop al Cold Calling a Freddo | Storm X Digital',
-    description: 'Il "Paradosso del Venditore" sta bloccando il tuo fatturato. Scopri perché il tuo team perde il 70% del tempo.'
+    title: 'The Silent Revenue Killer | Storm X Digital',
+    description: 'Your sales team wastes 70% of their time on data entry instead of closing. Discover the Seller\'s Paradox holding back your pipeline.'
   },
   {
     id: 'metodo',
@@ -82,7 +82,7 @@ const DynamicMeta: React.FC = () => {
     <Helmet>
       <title>{activeMeta.title}</title>
       <meta name="description" content={activeMeta.description} />
-      
+
       {/* Open Graph updates */}
       <meta property="og:title" content={activeMeta.title} />
       <meta property="og:description" content={activeMeta.description} />

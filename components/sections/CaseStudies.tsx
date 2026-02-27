@@ -11,12 +11,14 @@ const CaseStudies: React.FC = () => {
     <section id="case-studies" className="py-20 bg-brand-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-xs font-bold font-mono text-brand-accent uppercase tracking-widest mb-3">Casi Studio</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Strategie reali, risultati misurabili.
+          <h2 className="text-xs font-bold font-mono text-brand-accent uppercase tracking-widest mb-3">{language === 'it' ? 'Casi Studio' : 'Case Studies'}</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-brand-text mb-4">
+            {language === 'it' ? 'Strategie reali, risultati misurabili.' : 'Real strategies, measurable results.'}
           </h3>
           <p className="text-brand-muted max-w-2xl mx-auto">
-            Ecco come abbiamo aiutato altre aziende B2B a scalare il loro outbound.
+            {language === 'it'
+              ? 'Ecco come abbiamo aiutato altre aziende B2B a scalare il loro outbound.'
+              : 'Here\'s how we helped other B2B companies scale their outbound.'}
           </p>
         </div>
 
@@ -26,21 +28,21 @@ const CaseStudies: React.FC = () => {
               {/* Header with Logo */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-lg bg-brand-surfaceHighlight flex items-center justify-center text-white font-bold text-sm border border-brand-border group-hover:border-brand-accent/50 group-hover:text-brand-accent transition-colors">
-                        {study.logo}
-                    </div>
-                    <div>
-                        <h4 className="text-lg font-bold text-white leading-tight">{study.company}</h4>
-                        <span className="text-xs text-brand-muted">{study.industry}</span>
-                    </div>
+                  <div className="w-10 h-10 rounded-lg bg-brand-surfaceHighlight flex items-center justify-center text-brand-text font-bold text-sm border border-brand-border group-hover:border-brand-accent/50 group-hover:text-brand-accent transition-colors">
+                    {study.logo}
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-brand-text leading-tight">{study.company}</h4>
+                    <span className="text-xs text-brand-muted">{study.industry}</span>
+                  </div>
                 </div>
               </div>
 
               {/* Challenge */}
               <div className="mb-4">
                 <div className="flex items-center mb-2">
-                    <Target className="w-4 h-4 text-red-400 mr-2" />
-                    <h5 className="text-xs font-bold text-brand-text uppercase tracking-wide">La Sfida</h5>
+                  <Target className="w-4 h-4 text-red-400 mr-2" />
+                  <h5 className="text-xs font-bold text-brand-text uppercase tracking-wide">{language === 'it' ? 'La Sfida' : 'The Challenge'}</h5>
                 </div>
                 <p className="text-sm text-brand-muted leading-relaxed">{study.challenge}</p>
               </div>
@@ -48,8 +50,8 @@ const CaseStudies: React.FC = () => {
               {/* Solution */}
               <div className="mb-6">
                 <div className="flex items-center mb-2">
-                    <Zap className="w-4 h-4 text-yellow-400 mr-2" />
-                    <h5 className="text-xs font-bold text-brand-text uppercase tracking-wide">La Soluzione</h5>
+                  <Zap className="w-4 h-4 text-yellow-400 mr-2" />
+                  <h5 className="text-xs font-bold text-brand-text uppercase tracking-wide">{language === 'it' ? 'La Soluzione' : 'The Solution'}</h5>
                 </div>
                 <p className="text-sm text-brand-muted leading-relaxed">{study.solution}</p>
               </div>
@@ -59,18 +61,18 @@ const CaseStudies: React.FC = () => {
 
               {/* Results */}
               <div className="mt-auto">
-                 <div className="flex items-center mb-3">
-                    <TrendingUp className="w-4 h-4 text-brand-accent mr-2" />
-                    <h5 className="text-sm font-bold text-white">Risultati Chiave</h5>
-                 </div>
-                 <ul className="space-y-2">
-                   {study.results.map((result, rIdx) => (
-                     <li key={rIdx} className="flex items-start text-sm text-brand-text/80">
-                       <span className="w-1.5 h-1.5 bg-brand-accent rounded-full mr-2.5 mt-1.5 flex-shrink-0 shadow-[0_0_5px_#FF5500]"></span>
-                       {result}
-                     </li>
-                   ))}
-                 </ul>
+                <div className="flex items-center mb-3">
+                  <TrendingUp className="w-4 h-4 text-brand-accent mr-2" />
+                  <h5 className="text-sm font-bold text-brand-text">{language === 'it' ? 'Risultati Chiave' : 'Key Results'}</h5>
+                </div>
+                <ul className="space-y-2">
+                  {study.results.map((result, rIdx) => (
+                    <li key={rIdx} className="flex items-start text-sm text-brand-text/80">
+                      <span className="w-1.5 h-1.5 bg-brand-accent rounded-full mr-2.5 mt-1.5 flex-shrink-0 shadow-[0_0_5px_#FF5500]"></span>
+                      {result}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

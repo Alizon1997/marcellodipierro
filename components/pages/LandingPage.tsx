@@ -11,12 +11,14 @@ import FeaturedCaseStudy from '../sections/FeaturedCaseStudy';
 import Team from '../sections/Team';
 import CaseStudies from '../sections/CaseStudies';
 import Comparison from '../sections/Comparison';
-import Pricing from '../sections/Pricing';
-import Guarantee from '../sections/Guarantee';
+import OfferInfrastructure from '../sections/OfferInfrastructure';
 import FAQ from '../sections/FAQ';
 import CTA from '../sections/CTA';
 import DynamicMeta from '../SEO/DynamicMeta';
 import Reveal from '../ui/Reveal';
+import MobileStickyCTA from '../ui/MobileStickyCTA';
+import ExitIntentModal from '../ui/ExitIntentModal';
+
 
 const LandingPage: React.FC = () => {
   const location = useLocation();
@@ -85,26 +87,24 @@ const LandingPage: React.FC = () => {
         <CaseStudies />
       </Reveal>
 
-      {/* 10. The Offer: Comparison & Pricing */}
+      {/* 10. The Offer: Infrastructure & Value */}
       <Reveal>
-        <Comparison />
-      </Reveal>
-      <Reveal>
-        <Pricing /> {/* Receipt Style */}
+        <OfferInfrastructure />
       </Reveal>
 
-      {/* 11. Risk Reversal */}
-      <Reveal>
-        <Guarantee />
-      </Reveal>
-
-      {/* 12. Objections & Scarcity */}
+      {/* 11. Objections & Scarcity */}
       <Reveal>
         <FAQ />
       </Reveal>
       <Reveal>
         <CTA />
       </Reveal>
+
+      {/* Mobile Sticky CTA */}
+      <MobileStickyCTA />
+
+      {/* Exit Intent Modal (Desktop) */}
+      <ExitIntentModal />
     </>
   );
 };

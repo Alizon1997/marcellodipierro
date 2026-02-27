@@ -14,12 +14,13 @@ const IT = {
     { label: 'Casi Studio', href: '#case-studies' },
   ],
   HERO_COPY: {
-    badge: "SYSTEM STATUS: READY FOR SCALING | Accettiamo nuovi progetti solo su candidatura.",
+    badge: "SYSTEM STATUS: READY FOR SCALING | Solo 1 posto disponibile questo mese",
     headline: "Smetti di usare i tuoi Senior Sales come stagisti per il Data Entry.",
-    subheadline: "Costruiamo la tua infrastruttura di acquisizione proprietaria in 90 giorni. Senza assumere personale. Senza contratti vincolanti. Validiamo il tuo mercato, tu chiudi i contratti.",
-    ctaPrimary: "Richiedi Analisi di Fattibilità",
-    ctaSecondary: "Come funziona",
-    trustText: "Nessuna carta di credito richiesta. Analisi strategica gratuita."
+    subheadline: "Costruiamo il tuo motore outbound in 90 giorni — 60+ meeting qualificati garantiti, zero rischio di assunzione. Tu chiudi i contratti, noi alimentiamo la pipeline.",
+    ctaPrimary: "Richiedi Analisi Pipeline (Gratis)",
+    ctaSecondary: "Vedi Caso Studio",
+    trustText: "✓ Nessuna carta richiesta • ✓ Analisi in 24h • ✓ Zero impegno",
+    microTestimonial: "\"Pipeline finalmente costante\" — CEO, SaaS B2B"
   },
   STATS: [
     { value: "90gg", label: "Durata Pilot" },
@@ -104,48 +105,44 @@ const IT = {
   ],
   FAQS: [
     {
-      question: "Cos'è il Protocollo di Outreach Multicanale Storm X?",
-      answer: "Non è la classica lead generation. È un'infrastruttura B2B specializzata che utilizza strategie personalizzate per connettersi con i veri Decision Maker. Sfruttiamo canali come LinkedIn, Email, WhatsApp e Cold Call in sinergia per accelerare il ciclo di vendita. Il processo inizia con una ricerca di mercato approfondita, seguita da messaggistica chirurgica e ottimizzazione continua."
+      question: "Cosa include esattamente l'Ecosistema Storm X?",
+      answer: "L'offerta Storm X centralizza l'intera infrastruttura necessaria per il prospecting B2B moderno. Include: 1) Tecnologia Proprietaria (Setup domini, CRM, Data enrichment); 2) Intelligence Artificiale per l'analisi dei segnali di acquisto; 3) Un Team Senior dedicato (non stagisti) specializzato in Cold Email, LinkedIn e Human Calling; 4) Un Growth Architect che orchestra la strategia. È una soluzione 'chiavi in mano': tu ottieni il meeting, noi gestiamo la complessità."
     },
     {
-      question: "Quanto velocemente potete lanciare una campagna?",
-      answer: "Il Metodo Storm X è progettato per la velocità: siamo operativi in 7-14 giorni (Setup Tecnico + Riscaldamento). Rispetto all'assunzione di un BDR interno (3-6 mesi tra ricerca e onboarding), forniamo un servizio 'Plug & Play' ottimizzato con AI, focalizzato immediatamente sui KPI misurabili."
+      question: "Qual è il vostro modello economico?",
+      answer: "Il nostro modello è ibrido per allineare i nostri interessi ai tuoi risultati. Una 'Setup Fee' copre i costi vivi dell'infrastruttura, dei dati e della tecnologia. Una 'Success Fee' variabile è legata alla performance reale (Meeting Qualificati confermati). In breve: investi sull'asset, paghi per il risultato."
     },
     {
-      question: "Che risultati posso aspettarmi lavorando con voi?",
-      answer: "Con il nostro processo di Outreach, puoi raggiungere oltre 500 aziende in target in 45 giorni. L'obiettivo non sono vanity metrics, ma un flusso costante di meeting qualificati in agenda e l'apertura di trattative commerciali reali già nei primi mesi di collaborazione."
+      question: "Ci sono vincoli contrattuali a lungo termine?",
+      answer: "No. Non crediamo nei contratti annuali 'alla cieca'. Lavoriamo con un Pilot di 90 giorni (Validazione). Questo ci permette di dimostrare trazione e ROI senza vincolarti per anni. Se il sistema funziona, scaliamo. Se non funziona, non sei bloccato."
     },
     {
-      question: "Cosa vi differenzia dalle altre agenzie di Lead Gen?",
-      answer: "A differenza delle agenzie tradizionali, Storm X bypassa intermediari e segreterie (Gatekeeper) grazie a un metodo multicanale e tecnologico. Parliamo direttamente con chi ha potere di firma. Non ci limitiamo a fornire 'liste', costruiamo opportunità di business reali in modo più veloce ed efficace."
+      question: "Quali canali di prospecting utilizzate?",
+      answer: "A differenza delle agenzie tradizionali, noi sincronizziamo 4 canali: 1) Cold Email (per volume e deliverability); 2) LinkedIn (per social proof e networking); 3) WhatsApp (per rapidità e intimità sui prospect ingaggiati); 4) Human Cold Calling (per convertire l'interesse in appuntamento). Tutto gestito in un unico flusso logico."
     },
     {
-      question: "Come avverrà la comunicazione tra i nostri team?",
-      answer: "Creiamo un gruppo di chat istantanea (WhatsApp o Slack) per aggiornamenti in tempo reale su numeri e risultati. Inoltre, stabiliamo call settimanali di allineamento per analizzare i dati e ottimizzare la strategia."
+      question: "Come interviene l'AI nella vostra offerta?",
+      answer: "La nostra AI non scrive solo email. Agisce come un 'Radar Strategico': analizza le risposte per rilevare il sentiment, identifica i pattern di obiezione per migliorare gli script in tempo reale e ottimizza il timing dei follow-up. Serve a rendere il processo umano più chirurgico, non a sostituirlo con dei bot."
     },
     {
-      question: "Quali canali utilizzate per la generazione di contatti?",
-      answer: "Usiamo un mix strategico per massimizzare i risultati: LinkedIn (messaggi diretti e connessioni strategiche), Email Marketing personalizzato (Cold Outreach), WhatsApp (comunicazione rapida) e Cold Calling (follow-up e qualifica)."
+      question: "Chi gestisce operativamente le campagne?",
+      answer: "Non sarai un ticket in un sistema. Hai un Growth Architect dedicato come unico punto di contatto. Lui/Lei coordina gli SDR, monitora la dashboard e prende decisioni basate sui dati. Hai visibilità totale su chi fa cosa."
     },
     {
-      question: "Come proteggete la reputazione del mio dominio e la deliverability?",
-      answer: "Storm X protegge la reputazione del tuo dominio principale utilizzando sottodomini dedicati, configurando protocolli di autenticazione (SPF/DKIM/DMARC) e sistemi di riscaldamento (warm-up) automatico. Inviamo volumi controllati con messaggi non spammy e monitoriamo costantemente le blacklist per garantire la massima efficacia."
+      question: "Quanto tempo serve per vedere i primi risultati?",
+      answer: "Il Setup tecnico (Domini, ICP, Script) richiede circa 7-14 giorni. I primi meeting arrivano generalmente tra la 3° e la 4° settimana. La performance non è lineare: migliora mese su mese grazie all'apprendimento dell'AI e all'ottimizzazione del target."
     },
     {
-      question: "Quali risultati posso aspettarmi una volta firmato l'accordo?",
-      answer: "Nei primi mesi, puoi aspettarti 50+ meeting qualificati (in base al target), diverse trattative chiuse e una pipeline costante. Dal 1° mese generiamo trazione; entro il 6° mese vedrai un ROI misurabile e una penetrazione di mercato profonda. Il processo è scalabile sia sul mercato domestico che estero."
+      question: "A chi si rivolge Storm X?",
+      answer: "Storm X è progettato per aziende B2B 'High-Ticket' (Deal size >€5k-10k) che vogliono scalare senza appesantire la struttura interna. Ideale per: PMI che vogliono internazionalizzare, Startups B2B post-seed, e Team Vendita Enterprise che vogliono esternalizzare la parte di 'caccia' per focalizzarsi sulla chiusura."
     },
     {
-      question: "Come capisco se Storm X è adatto alla mia azienda?",
-      answer: "Il servizio è ideale per aziende B2B (Manifattura, SaaS, Servizi) con una Value Proposition solida e ben definita. Questi elementi semplificano il lavoro e aumentano drasticamente la probabilità di successo, permettendoci di creare connessioni efficaci con i decisori."
+      question: "È conforme al GDPR?",
+      answer: "Assolutamente sì. Operiamo rigorosamente sotto il principio del 'Legittimo Interesse' (GDPR Art. 6). Utilizziamo solo dati B2B verificati, gestiamo automaticamente le liste di esclusione/disiscrizione e garantiamo la tracciabilità completa dei trattamenti dati."
     },
     {
-      question: "Agite anche come Fractional Sales Manager?",
-      answer: "Sì. Se hai bisogno di un partner che agisca anche come Responsabile Vendite Frazionario, Storm X è la soluzione. Il nostro servizio va oltre la generazione di lead: ti supportiamo nella chiusura (closing), negoziazione e gestione del cliente, agendo come un'estensione del tuo team per convertire le opportunità in fatturato."
-    },
-    {
-      question: "Qual è il modello di pricing?",
-      answer: "Il nostro modello include una fee mensile fissa (per infrastruttura e team) e una componente variabile basata sui risultati. Consigliamo un impegno di 12 mesi per valutare appieno l'efficacia del sistema, ma siamo flessibili: partiamo spesso con un Pilot di 90 giorni per validare i numeri prima di scalare."
+      question: "Perché conviene rispetto ad assumere internamente?",
+      answer: "Matematica semplice: Assumere un Senior SDR costa €40k-50k/anno + TFR + 6 mesi di training + costo software (€1.5k/mese). Con Storm X, accedi a un intero team Senior e a uno stack tecnologico completo per una frazione del costo, operativo in 14 giorni invece che in 6 mesi."
     }
   ],
   CASE_STUDIES: [
@@ -217,22 +214,22 @@ const IT = {
     {
       name: "Marcello Di Pierro",
       role: "Founder & CEO",
-      superpower: "Trasforma il caos in processi scalabili. 10 anni di esperienza con brand globali come Reebok & Supreme."
+      superpower: "Ha costruito macchine outbound da zero per brand come Reebok, Supreme e 40+ scale-up B2B. La sua filosofia: dati prima, opinioni dopo."
     },
     {
       name: "Armand Ohoungnon",
       role: "Head of Inbound",
-      superpower: "Mago del Performance Marketing. Strategia e operazioni per campagne Meta & Lead Gen Inbound."
+      superpower: "Gestisce budget media a 6 cifre senza sprechi. Ogni euro investito diventa pipeline misurabile grazie a campagne Meta e strategie di Lead Gen ad alto rendimento."
     },
     {
       name: "Francesco Monopoli",
       role: "Account Manager",
-      superpower: "Growth Strategist - List builder Expert - Multichannel Outreach"
+      superpower: "Costruisce liste ICP con precisione chirurgica. I giusti contatti, nel momento giusto, con il messaggio giusto — trasformando elenchi freddi in opportunità calde."
     },
     {
       name: "Sali Leshi",
       role: "Outreach Specialist",
-      superpower: "Outbound + Clay + CRM + Lemlist Expert"
+      superpower: "Artigiano delle sequenze outbound. Trasforma dati grezzi in conversazioni qualificate usando Clay, Lemlist e un tocco umano che nessuna AI può replicare."
     }
   ],
   GUARANTEE: {
@@ -349,16 +346,19 @@ const IT = {
   },
   // Extra UI Strings
   UI: {
-    bookPilot: "Prenota Pilot",
-    bookAnalysis: "Richiedi Analisi",
-    bookSession: "Prenota Sessione Strategica",
-    activatePilot: "Attiva Offerta Pilot",
+    bookPilot: "Prenota Pilot 90gg",
+    bookAnalysis: "Richiedi Analisi Gratuita",
+    bookSession: "Richiedi Analisi — Zero Impegno",
+    activatePilot: "Blocca il Tuo Posto (1/2 Disponibili)",
     guarantee: "Garanzia \"Soddisfatti o Rimborsati\" nei primi 14 giorni",
     totalValue: "Valore Totale",
-    yourPrice: "Il Tuo Prezzo",
+    yourPrice: "Il Tuo Prezzo Pilot",
     month: "/mese",
     footerText: "Sistema di Outbound Marketing per PMI B2B. Costruito per scalare.",
-    rights: "All Rights Reserved."
+    rights: "All Rights Reserved.",
+    trustBadge1: "🔒 GDPR Compliant",
+    trustBadge2: "✓ Setup in 14 giorni",
+    trustBadge3: "✓ 60+ meeting in 90gg"
   }
 };
 
@@ -370,12 +370,13 @@ const EN = {
     { label: 'Case Studies', href: '#case-studies' },
   ],
   HERO_COPY: {
-    badge: "SYSTEM STATUS: READY FOR SCALING | Acceptance by application only.",
+    badge: "SYSTEM STATUS: READY FOR SCALING | Only 1 spot available this month",
     headline: "Stop using your Senior Sales Reps as Data Entry Interns.",
-    subheadline: "We build your proprietary acquisition infrastructure in 90 days. No hiring. No long-term contracts. We validate your market, you close the deals.",
-    ctaPrimary: "Request Feasibility Analysis",
-    ctaSecondary: "How it works",
-    trustText: "No credit card required. Free strategic analysis."
+    subheadline: "We build your outbound engine in 90 days — 60+ qualified meetings guaranteed, zero hiring risk. You focus on closing; we handle the pipeline.",
+    ctaPrimary: "Request Pipeline Analysis (Free)",
+    ctaSecondary: "See Case Study",
+    trustText: "✓ No card required • ✓ Analysis in 24h • ✓ Zero commitment",
+    microTestimonial: "\"Finally a consistent pipeline\" — CEO, B2B SaaS"
   },
   STATS: [
     { value: "90 Days", label: "Pilot Duration" },
@@ -460,48 +461,44 @@ const EN = {
   ],
   FAQS: [
     {
-      question: "What Is Storm X’s Multichannel Outreach And How Does It Work?",
-      answer: "Storm X’s Multichannel Outreach is a specialized B2B lead generation process that uses personalized strategies to connect with business decision-makers. We leverage channels such as LinkedIn, email, WhatsApp, and cold calls to accelerate your sales cycle. Our process starts with in-depth market research, followed by tailored messaging and continuous campaign optimization to ensure measurable results."
+      question: "What exactly does the Storm X Ecosystem include?",
+      answer: "The Storm X offer centralizes the entire infrastructure needed for modern B2B prospecting. It includes: 1) Proprietary Technology (Domain setup, CRM, Data enrichment); 2) Artificial Intelligence for buying signal analysis; 3) A dedicated Senior Team (no interns) specialized in Cold Email, LinkedIn, and Human Calling; 4) A Growth Architect who orchestrates the strategy. It's a 'turnkey' solution: you get the meeting, we manage the complexity."
     },
     {
-      question: "How Quickly Can You Launch A Campaign?",
-      answer: "The StormX Method is three times faster and more effective than a traditional BDR. We provide a tailored service optimized with AI, focusing on measurable KPIs and tangible results. We are operational in 7-14 days."
+      question: "What is your pricing model?",
+      answer: "Our model is hybrid to align our interests with your results. A 'Setup Fee' covers the hard costs of infrastructure, data, and technology. A variable 'Success Fee' is tied to real performance (Confirmed Qualified Meetings). In short: invest in the asset, pay for the result."
     },
     {
-      question: "What Results Can I Expect When I Partner With Storm X?",
-      answer: "With the Multichannel OUTREACH process, you can reach over 500 companies in 45 days, creating a consistent flow of qualified meetings with prospects, and initiating partnerships and sales within the first few months of collaboration."
+      question: "Are there long-term contractual constraints?",
+      answer: "No. We don't believe in 'blind' annual contracts. We work with a 90-day Pilot (Validation). This allows us to demonstrate traction and ROI without locking you in for years. If the system works, we scale. If it doesn't, you're not stuck."
     },
     {
-      question: "What Advantages Does Storm X’s Method Offer Compared To Other Lead Generation Agencies?",
-      answer: "Unlike traditional agencies, Storm X reaches decision-makers directly by bypassing intermediaries and secretary's office, thanks to a multichannel method powered by AI. Instead of just providing leads, it builds sales meetings and real business opportunities faster and more effectively."
+      question: "Which prospecting channels do you use?",
+      answer: "Unlike traditional agencies, we synchronize 4 channels: 1) Cold Email (for volume and deliverability); 2) LinkedIn (for social proof and networking); 3) WhatsApp (for speed and intimacy with engaged prospects); 4) Human Cold Calling (to convert interest into appointments). All managed in a single logical flow."
     },
     {
-      question: "How Does The Communication Between Our Team Look Like?",
-      answer: "We will create an instant chatgroup on Teams or WhatsApp where we will share results, numbers and where we will make weekly team calls."
+      question: "How does AI intervene in your offer?",
+      answer: "Our AI doesn't just write emails. It acts as a 'Strategic Radar': analyzing responses to detect sentiment, identifying objection patterns to improve scripts in real-time, and optimizing follow-up timing. It serves to make the human process more surgical, not to replace it with bots."
     },
     {
-      question: "Which Outreach Channels Do You Use For Lead Generation?",
-      answer: "We use a mix of channels to optimize results, including: LinkedIn (direct messages and strategic connections), Personalized email marketing, WhatsApp for quick and direct communication, and Cold calling."
+      question: "Who manages the campaigns operationally?",
+      answer: "You won't be a ticket in a system. You have a dedicated Growth Architect as your single point of contact. He/She coordinates the SDRs, monitors the dashboard, and makes data-driven decisions. You have total visibility on who does what."
     },
     {
-      question: "How Do You Protect My Domain Reputation And Ensure High Email Deliverability?",
-      answer: "Storm X protects your domain reputation by using dedicated subdomains, SPF/DKIM/DMARC authentication, and automated warm-up systems. Emails are sent in controlled volumes with personalized, non-spammy messaging. We continuously monitor deliverability, blacklists, and engagement to ensure maximum effectiveness."
+      question: "How long does it take to see the first results?",
+      answer: "Technical Setup (Domains, ICP, Scripts) takes about 7-14 days. The first meetings generally arrive between the 3rd and 4th week. Performance is not linear: it improves month over month thanks to AI learning and target optimization."
     },
     {
-      question: "What Results Can I Expect When We Sign An Agreement?",
-      answer: "In the first months with Storm X, you can expect over 50+ qualified meetings, multiple closed deals, and a steady pipeline of sales opportunities. From month 1, we generate traction with targeted outreach, and by month 6, you’ll see measurable ROI and market penetration. The process is data-driven, multichannel and can be scaled in your domestic market and abroad."
+      question: "Who is Storm X for?",
+      answer: "Storm X is designed for 'High-Ticket' B2B companies (Deal size >€5k-10k) that want to scale without burdening their internal structure. Ideal for: SMBs looking to internationalize, Post-seed B2B Startups, and Enterprise Sales Teams wanting to outsource the 'hunting' part to focus on closing."
     },
     {
-      question: "How Can I Determine If Storm X Is The Right Service For My Business?",
-      answer: "The service is ideal for manufacturers and companies with a well-defined and strong value proposition. These elements simplify the work and increase the probability of success, allowing us to create effective connections with decision makers."
+      question: "Is it GDPR compliant?",
+      answer: "Absolutely yes. We operate strictly under the principle of 'Legitimate Interest' (GDPR Art. 6). We use only verified B2B data, automatically manage exclusion/unsubscribe lists, and guarantee full traceability of data processing."
     },
     {
-      question: "Do You Act As A Fractional Sales Manager?",
-      answer: "Yes — if you need a partner who can also act as a Fractional Sales Manager, Storm X is exactly what you're looking for. Our service goes beyond lead generation: we support you in sales closing, negotiation, and client management, acting as an extension of your team to convert opportunities into real revenue."
-    },
-    {
-      question: "What Is The Pricing Model Like?",
-      answer: "Our pricing model includes both a fixed monthly fee and a variable component based on results generated. We recommend a 12-month engagement to fully assess the effectiveness of our system and benchmark results against your current approach. However, if you have specific time constraints, we’re flexible — let’s discuss your goals and tailor a plan that works for you."
+      question: "Why is it better than hiring internally?",
+      answer: "Simple math: Hiring a Senior SDR costs €40k-50k/year + severance + 6 months training + software costs (€1.5k/month). With Storm X, you access an entire Senior team and a full tech stack for a fraction of the cost, operational in 14 days instead of 6 months."
     }
   ],
   CASE_STUDIES: [
@@ -573,22 +570,22 @@ const EN = {
     {
       name: "Marcello Di Pierro",
       role: "Founder & CEO",
-      superpower: "Transforms chaos into scalable processes. 10 years building sales infrastructure for global brands like Reebok & Supreme."
+      superpower: "Built scalable outbound engines from scratch for brands like Reebok, Supreme, and 40+ B2B scale-ups. His philosophy: data first, opinions second."
     },
     {
       name: "Armand Ohoungnon",
       role: "Head of Inbound",
-      superpower: "Performance Marketing Wizard. Strategy and ops for Meta & Inbound Lead Gen campaigns."
+      superpower: "Manages 6-figure media budgets without waste. Every euro invested in advertising becomes measurable pipeline through Meta & inbound lead gen mastery."
     },
     {
       name: "Francesco Monopoli",
       role: "Account Manager",
-      superpower: "Growth Strategist - List builder Expert - Multichannel Outreach"
+      superpower: "Builds ICP lists with surgical precision. The right contacts, at the right moment, with the right message — turning cold prospects into hot opportunities."
     },
     {
       name: "Sali Leshi",
       role: "Outreach Specialist",
-      superpower: "Outbound + Clay + CRM + Lemlist Expert"
+      superpower: "Outbound sequence craftsman. Transforms raw data into qualified conversations using Clay, Lemlist, and a human touch that no AI can replicate."
     }
   ],
   GUARANTEE: {
@@ -704,16 +701,19 @@ const EN = {
     }
   },
   UI: {
-    bookPilot: "Book Pilot",
-    bookAnalysis: "Request Analysis",
-    bookSession: "Book Strategy Session",
-    activatePilot: "Activate Pilot Offer",
+    bookPilot: "Book 90-Day Pilot",
+    bookAnalysis: "Request Free Analysis",
+    bookSession: "Request Analysis — Zero Commitment",
+    activatePilot: "Secure Your Spot (1/2 Available)",
     guarantee: "Money-Back Guarantee in the first 14 days",
     totalValue: "Total Value",
-    yourPrice: "Your Price",
+    yourPrice: "Your Pilot Price",
     month: "/month",
     footerText: "B2B Outbound Marketing System for SMBs. Built to scale.",
-    rights: "All Rights Reserved."
+    rights: "All Rights Reserved.",
+    trustBadge1: "🔒 GDPR Compliant",
+    trustBadge2: "✓ Setup in 14 days",
+    trustBadge3: "✓ 60+ meetings in 90 days"
   }
 };
 
