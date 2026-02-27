@@ -23,13 +23,10 @@ const BlogList: React.FC = () => {
           "excerpt": pt::text(body)
         }`;
         const data = await client.fetch(query);
-        
-        // Process excerpt to be short
         const processedData = data.map((post: any) => ({
           ...post,
           excerpt: post.excerpt ? post.excerpt.substring(0, 160) + '...' : ''
         }));
-        
         setPosts(processedData);
       } catch (error) {
         console.error('Error fetching posts from Sanity:', error);
@@ -37,7 +34,6 @@ const BlogList: React.FC = () => {
         setLoading(false);
       }
     };
-
     fetchPosts();
   }, []);
 
@@ -52,7 +48,7 @@ const BlogList: React.FC = () => {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-brand-text mb-6">
             Storm X <span className="text-brand-accent">Insights</span>
           </h1>
           <p className="text-brand-muted text-lg max-w-2xl mx-auto">
@@ -72,8 +68,11 @@ const BlogList: React.FC = () => {
         {!loading && posts.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
-              <Link to={`/blog/${post.slug.current}`} key={post._id} className="group flex flex-col bg-brand-surface border border-brand-border rounded-2xl overflow-hidden hover:border-brand-accent/50 transition-all duration-300 hover:shadow-glow">
-
+              <Link
+                to={`/blog/${post.slug.current}`}
+                key={post._id}
+                className="group flex flex-col bg-brand-surface border border-brand-border rounded-2xl overflow-hidden hover:border-brand-accent/50 transition-all duration-300 hover:shadow-glow"
+              >
                 {/* Image */}
                 <div className="relative aspect-video overflow-hidden bg-brand-surfaceHighlight">
                   {post.mainImage ? (
@@ -87,7 +86,7 @@ const BlogList: React.FC = () => {
                   )}
 
                   {post.categories && post.categories.length > 0 && (
-                    <div className="absolute top-4 left-4 bg-brand-dark/80 backdrop-blur border border-brand-border px-3 py-1 rounded-full text-xs font-mono text-brand-accent uppercase tracking-wider">
+                    <div className="absolute top-4 left-4 bg-black/60 backdrop-blur border border-white/10 px-3 py-1 rounded-full text-xs font-mono text-white uppercase tracking-wider">
                       {post.categories[0]}
                     </div>
                   )}
@@ -100,7 +99,7 @@ const BlogList: React.FC = () => {
                     <span className="flex items-center"><Calendar className="w-3 h-3 mr-1" /> {formatDate(post.publishedAt)}</span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-accent transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-brand-text mb-3 group-hover:text-brand-accent transition-colors line-clamp-2">
                     {post.title}
                   </h3>
 

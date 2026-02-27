@@ -30,12 +30,9 @@ const BlogPost: React.FC = () => {
           "excerpt": pt::text(body)
         }`;
         const data = await client.fetch(query, { slug });
-
-        // Process excerpt for meta description
         if (data && data.excerpt) {
           data.excerpt = data.excerpt.substring(0, 160) + '...';
         }
-
         setPost(data);
       } catch (error) {
         console.error('Error fetching post from Sanity:', error);
@@ -43,10 +40,7 @@ const BlogPost: React.FC = () => {
         setLoading(false);
       }
     };
-
-    if (slug) {
-      fetchPost();
-    }
+    if (slug) fetchPost();
   }, [slug]);
 
   const formatDate = (dateString: string) => {
@@ -70,13 +64,27 @@ const BlogPost: React.FC = () => {
       }
     },
     block: {
-      h2: ({ children }: any) => <h2 className="text-2xl font-bold text-white mt-12 mb-6">{children}</h2>,
-      h3: ({ children }: any) => <h3 className="text-xl font-bold text-white mt-8 mb-4">{children}</h3>,
-      blockquote: ({ children }: any) => <blockquote className="border-l-4 border-brand-accent pl-4 italic my-8 text-brand-muted">{children}</blockquote>,
+      normal: ({ children }: any) => <p className="text-brand-text/80 leading-relaxed mb-4">{children}</p>,
+      h2: ({ children }: any) => <h2 className="text-2xl font-bold text-brand-text mt-12 mb-6">{children}</h2>,
+      h3: ({ children }: any) => <h3 className="text-xl font-bold text-brand-text mt-8 mb-4">{children}</h3>,
+      blockquote: ({ children }: any) => (
+        <blockquote className="border-l-4 border-brand-accent pl-6 py-2 my-8 bg-brand-surfaceHighlight rounded-r-lg italic text-brand-muted">
+          {children}
+        </blockquote>
+      ),
+    },
+    marks: {
+      strong: ({ children }: any) => <strong className="font-bold text-brand-text">{children}</strong>,
+      em: ({ children }: any) => <em className="italic text-brand-text/80">{children}</em>,
+      code: ({ children }: any) => <code className="bg-brand-surfaceHighlight text-brand-accent px-1.5 py-0.5 rounded font-mono text-sm">{children}</code>,
     },
     list: {
-      bullet: ({ children }: any) => <ul className="list-disc pl-5 space-y-2 text-brand-muted my-6">{children}</ul>,
-      number: ({ children }: any) => <ol className="list-decimal pl-5 space-y-2 text-brand-muted my-6">{children}</ol>,
+      bullet: ({ children }: any) => <ul className="list-disc pl-6 space-y-2 text-brand-text/80 my-6">{children}</ul>,
+      number: ({ children }: any) => <ol className="list-decimal pl-6 space-y-2 text-brand-text/80 my-6">{children}</ol>,
+    },
+    listItem: {
+      bullet: ({ children }: any) => <li className="leading-relaxed">{children}</li>,
+      number: ({ children }: any) => <li className="leading-relaxed">{children}</li>,
     }
   };
 
@@ -91,7 +99,7 @@ const BlogPost: React.FC = () => {
   if (!post) {
     return (
       <div className="pt-32 pb-20 bg-brand-dark min-h-screen text-center px-4">
-        <h1 className="text-white text-2xl mb-4">Articolo non trovato</h1>
+        <h1 className="text-brand-text text-2xl mb-4">Articolo non trovato</h1>
         <Link to="/blog" className="text-brand-accent hover:underline">Torna al Blog</Link>
       </div>
     );
@@ -119,28 +127,34 @@ const BlogPost: React.FC = () => {
 
           {/* Header */}
           <header className="mb-12">
-            <div className="flex items-center space-x-4 text-xs font-mono text-brand-accent mb-4">
+            <div className="flex items-center space-x-3 text-xs font-mono mb-4">
               {post.categories && post.categories.length > 0 && (
-                <span className="bg-brand-surface border border-brand-border px-2 py-1 rounded uppercase">{post.categories[0]}</span>
+                <span className="bg-brand-accent/10 border border-brand-accent/20 text-brand-accent px-3 py-1 rounded-full uppercase tracking-wider">
+                  {post.categories[0]}
+                </span>
               )}
-              <span className="flex items-center text-brand-muted"><Clock className="w-3 h-3 mr-1" /> 5 MIN READ</span>
+              <span className="flex items-center text-brand-muted">
+                <Clock className="w-3 h-3 mr-1" /> 5 MIN READ
+              </span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+
+            <h1 className="text-3xl md:text-5xl font-bold text-brand-text mb-6 leading-tight">
               {post.title}
             </h1>
+
             <div className="flex items-center justify-between border-y border-brand-border py-4">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 rounded-full bg-brand-surfaceHighlight overflow-hidden">
+                <div className="w-10 h-10 rounded-full bg-brand-surfaceHighlight overflow-hidden border border-brand-border">
                   {post.authorImage ? (
                     <img src={urlFor(post.authorImage).width(100).url()} alt={post.authorName} className="w-full h-full object-cover" />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-brand-surface border border-brand-border">
+                    <div className="w-full h-full flex items-center justify-center">
                       <User className="w-5 h-5 text-brand-muted" />
                     </div>
                   )}
                 </div>
                 <div>
-                  <p className="text-white text-sm font-bold">{post.authorName || 'Storm X Team'}</p>
+                  <p className="text-brand-text text-sm font-bold">{post.authorName || 'Storm X Team'}</p>
                   <p className="text-brand-muted text-xs">Author</p>
                 </div>
               </div>
@@ -155,14 +169,14 @@ const BlogPost: React.FC = () => {
           </header>
 
           {/* Content */}
-          <div className="prose prose-invert prose-lg max-w-none">
+          <div className="prose max-w-none text-brand-text/80 leading-relaxed">
             <PortableText value={post.body} components={ptComponents} />
           </div>
 
           {/* CTA Box */}
-          <div className="mt-16 bg-brand-surface border border-brand-border rounded-2xl p-8 text-center relative overflow-hidden group hover:border-brand-accent/50 transition-colors">
+          <div className="mt-16 bg-brand-surface border border-brand-border rounded-2xl p-8 text-center relative overflow-hidden group hover:border-brand-accent/50 transition-colors shadow-sm">
             <div className="absolute top-0 left-0 w-full h-1 bg-brand-accent"></div>
-            <h3 className="text-2xl font-bold text-white mb-4">Vuoi applicare questo sistema alla tua azienda?</h3>
+            <h3 className="text-2xl font-bold text-brand-text mb-4">Vuoi applicare questo sistema alla tua azienda?</h3>
             <p className="text-brand-muted mb-8 max-w-lg mx-auto">
               Non perdere tempo a fare A/B testing da solo. Il nostro team ha già inviato milioni di email e sa cosa funziona.
             </p>

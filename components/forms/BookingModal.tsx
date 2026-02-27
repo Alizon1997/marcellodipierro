@@ -4,6 +4,19 @@ import { useModal } from '../../context/ModalContext';
 import { supabase } from '../../lib/supabase';
 import Button from '../ui/Button';
 import { useLanguage } from '../../context/LanguageContext';
+import emailjs from '@emailjs/browser';
+
+// ─── EmailJS Configuration ────────────────────────────────────────────────────
+// 1. Create a free account at https://www.emailjs.com
+// 2. Add an Email Service (Gmail, Outlook, etc.) → copy the Service ID below
+// 3. Create an Email Template with these variables:
+//      {{from_name}}  {{from_email}}  {{company}}  {{phone}}  {{submission_date}}
+//    Set "To Email" to YOUR email address (e.g. marcello@stormxdigital.com)
+// 4. Copy your Public Key from Account → API Keys
+// ─────────────────────────────────────────────────────────────────────────────
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_abc123'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xyz789'
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'AbCdEfGhIjKlMnOp'
 
 const BookingModal: React.FC = () => {
   const { isModalOpen, closeModal } = useModal();
@@ -24,10 +37,34 @@ const BookingModal: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const sendEmailNotification = (data: typeof formData) => {
+    // Only attempt if credentials have been configured
+    if (EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID') return;
+
+    emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        from_name:       data.name,
+        from_email:      data.email,
+        company:         data.company,
+        phone:           data.phone,
+        submission_date: new Date().toLocaleString('it-IT'),
+      },
+      EMAILJS_PUBLIC_KEY
+    ).catch((err) => {
+      // Log silently — never block the user experience
+      console.warn('EmailJS notification failed:', err);
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
+
+    // Fire email notification immediately (non-blocking)
+    sendEmailNotification(formData);
 
     try {
       const { error: supabaseError } = await supabase
@@ -45,7 +82,6 @@ const BookingModal: React.FC = () => {
       if (supabaseError) throw supabaseError;
 
       setSuccess(true);
-      // Reset after success
       setTimeout(() => {
         closeModal();
         setSuccess(false);
@@ -53,7 +89,8 @@ const BookingModal: React.FC = () => {
       }, 3000);
     } catch (err: any) {
       console.error('Error submitting form:', err);
-      // Fallback for demo purposes if table doesn't exist yet, show success anyway to not block user
+      // If the Supabase table doesn't exist yet, still show success
+      // (email notification already sent above)
       if (err.message?.includes('relation "leads" does not exist')) {
         setSuccess(true);
         setTimeout(() => {
