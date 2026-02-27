@@ -17,6 +17,8 @@ const Navbar: React.FC = () => {
 
   const t = TRANSLATIONS[language];
   const isHome = location.pathname === '/';
+  // Show the TARGET language (what user will switch TO) for clarity
+  const targetLang = language === 'it' ? 'EN' : 'IT';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,11 +83,12 @@ const Navbar: React.FC = () => {
             <div className="flex items-center space-x-3 ml-4">
               <button
                 onClick={toggleLanguage}
-                className="flex items-center space-x-1 p-2 rounded-full text-brand-muted hover:text-brand-accent hover:bg-brand-surfaceHighlight transition-all font-mono text-xs font-bold"
+                className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-full text-brand-muted hover:text-brand-accent hover:bg-brand-surfaceHighlight transition-all font-mono text-xs font-bold border border-brand-border/50 hover:border-brand-accent/30"
                 aria-label="Switch Language"
+                title={language === 'it' ? 'Switch to English' : 'Passa a Italiano'}
               >
-                <Globe className="w-4 h-4" />
-                <span>{language.toUpperCase()}</span>
+                <Globe className="w-3.5 h-3.5" />
+                <span>{targetLang}</span>
               </button>
 
               <Button
@@ -104,10 +107,11 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={toggleLanguage}
-              className="p-2 rounded-full text-brand-muted hover:text-brand-accent transition-all font-mono text-xs font-bold flex items-center space-x-1"
+              className="px-2.5 py-1.5 rounded-full text-brand-muted hover:text-brand-accent transition-all font-mono text-xs font-bold flex items-center space-x-1.5 border border-brand-border/50 hover:border-brand-accent/30"
+              title={language === 'it' ? 'Switch to English' : 'Passa a Italiano'}
             >
-              <Globe className="w-4 h-4" />
-              <span>{language.toUpperCase()}</span>
+              <Globe className="w-3.5 h-3.5" />
+              <span>{targetLang}</span>
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}

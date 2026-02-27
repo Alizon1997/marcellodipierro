@@ -14,7 +14,7 @@ const IT = {
     { label: 'Casi Studio', href: '#case-studies' },
   ],
   HERO_COPY: {
-    badge: "SYSTEM STATUS: READY FOR SCALING | Solo 1 posto disponibile questo mese",
+    badge: "STATO SISTEMA: PRONTO PER SCALARE | Solo 1 posto disponibile questo mese",
     headline: "Smetti di usare i tuoi Senior Sales come stagisti per il Data Entry.",
     subheadline: "Costruiamo il tuo motore outbound in 90 giorni — 60+ meeting qualificati garantiti, zero rischio di assunzione. Tu chiudi i contratti, noi alimentiamo la pipeline.",
     ctaPrimary: "Richiedi Analisi Pipeline (Gratis)",
@@ -238,7 +238,7 @@ const IT = {
     highlight: "lavoriamo gratis il 4° mese"
   },
   WHATSAPP: {
-    label: "Direct Access Protocol",
+    label: "Protocollo di Accesso Diretto",
     headline: "Non è spam. È business alla velocità della luce.",
     subheadline: "Le email si possono ignorare. Le chiamate si possono bloccare. Ma un approccio ibrido e umano non si può fermare.",
     pillars: [
@@ -266,18 +266,18 @@ const IT = {
       voiceTime: "0:24",
       reply: "Ciao, sì. Chiamami domani mattina.",
       inputPlaceholder: "Messaggio",
-      unlock: "Swipe up to unlock"
+      unlock: "Scorri per sbloccare"
     }
   },
   FEATURED_CASE: {
-    label: "Featured Case Study",
+    label: "Caso Studio in Evidenza",
     headline: "Da innovatore di nicchia a pipeline globale in 9 mesi.",
     company: "Isolcore",
     subCompany: "New Zealand Company Srl",
     sector: "Settore: Deep Tech / Isolamento Termico",
-    challengeTitle: "The Challenge",
+    challengeTitle: "La Sfida",
     challengeDesc: "Tecnologia superiore, ma presenza limitata al mercato italiano. Obiettivo critico: Aprire mercati B2B in Europa e Medio Oriente senza attendere i tempi biblici del passaparola o delle fiere di settore.",
-    strategyTitle: "The Strategy",
+    strategyTitle: "La Strategia",
     strategyDesc: "Outreach Multicanale (LinkedIn + Email + WhatsApp). Abbiamo creato un mix di educazione tecnica (per i CTO) e 'curiosità commerciale' (per i Buyer) per trasformare lead freddi in meeting caldi.",
     points: [
       "Mappatura Distributori UK & GCC",
@@ -289,38 +289,38 @@ const IT = {
       { value: "100%", label: "Conv. Meeting UK" },
       { value: "5", label: "Accordi Quadro" }
     ],
-    cta: "Scarica il Case Study Completo (PDF)",
-    videoBadge: "Live Interview"
+    cta: "Scarica il Caso Studio Completo (PDF)",
+    videoBadge: "Intervista Live"
   },
   PILOT_PHASES: [
     {
-      title: "Fase 1: Setup & Infrastructure",
+      title: "Fase 1: Setup & Infrastruttura",
       time: "Giorni 1-14",
       desc: "Configurazione domini dedicati, riscaldamento IP, setup CRM e definizione strategica delle Buyer Personas (ICP)."
     },
     {
-      title: "Fase 2: Launch & Market Fit",
+      title: "Fase 2: Lancio & Validazione",
       time: "Giorni 15-60",
       desc: "Lancio campagne A/B test multicanale. Raccogliamo dati qualitativi per capire cosa converte e cosa no."
     },
     {
-      title: "Fase 3: Scale & Optimization",
+      title: "Fase 3: Scala & Ottimizzazione",
       time: "Giorni 61-90",
       desc: "Isoliamo le variabili vincenti (messaggi, canali, target) e scaliamo i volumi per riempire l'agenda."
     }
   ],
   MECHANISM_COPY: {
-    label: "L'Offerta: 90 Days Pilot",
+    label: "L'Offerta: Pilot 90 Giorni",
     headline: "Validazione Scientifica in 90 Giorni.",
-    subheadline: "Garanzia Risk-Reversal.",
+    subheadline: "Garanzia di Rimborso.",
     desc: "Perché vincolarsi con contratti annuali o assumere personale interno senza certezze? Il nostro Pilot Program è uno 'Stress-Test' del tuo mercato.",
     guaranteeTitle: "Garanzia di Risultato",
     guaranteeDesc: "Non vendiamo tentativi. Se al termine del Pilot (90 giorni) non raggiungiamo i KPI concordati, lavoriamo gratuitamente fino al raggiungimento dell'obiettivo.",
     funnelLegend: {
-      hot: "Hot Leads (Meeting)",
+      hot: "Lead Caldi (Meeting)",
       nurture: "Nurture (Database)",
-      system: "SYSTEM: ONLINE",
-      processing: "PROCESSING LIVE DATA..."
+      system: "SISTEMA: ONLINE",
+      processing: "ELABORAZIONE DATI LIVE..."
     }
   },
   PARADIGM_SHIFT: {
@@ -331,17 +331,17 @@ const IT = {
     quote: "\"Noi costruiamo il processo. Noi riscaldiamo il contatto. Voi chiudete.\"",
     flowchartTitle: "Workflow Multicanale Proprietario",
     flowchart: {
-      target: "Target: CEO / CIO / Directors",
-      step1: "Connection",
-      step1Desc: "Soft Touch",
-      step2: "Value Prop",
+      target: "Target: CEO / CIO / Direttori",
+      step1: "Connessione",
+      step1Desc: "Primo Contatto",
+      step2: "Proposta",
       step2Desc: "Educazione",
-      step3: "Direct",
-      step3Desc: "Personal Video",
-      step4: "Contact",
-      step4Desc: "Closing Call",
+      step3: "Diretto",
+      step3Desc: "Video Personale",
+      step4: "Contatto",
+      step4Desc: "Chiamata Finale",
       outputTitle: "Meeting Confermato",
-      outputDesc: "SQL (Sales Qualified Lead)"
+      outputDesc: "SQL (Lead Qualificato)"
     }
   },
   // Extra UI Strings

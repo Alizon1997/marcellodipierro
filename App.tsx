@@ -10,6 +10,7 @@ import DynamicMeta from './components/SEO/DynamicMeta';
 import { ModalProvider } from './context/ModalContext';
 import { LanguageProvider } from './context/LanguageContext';
 import BookingModal from './components/forms/BookingModal';
+import ErrorBoundary from './components/ui/ErrorBoundary';
 
 // Scrolls to top on route change, or smooth-scrolls to hash target
 const ScrollToTop: React.FC = () => {
@@ -56,13 +57,15 @@ const AppContent: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <LanguageProvider>
-      <ModalProvider>
-        <Router>
-          <AppContent />
-        </Router>
-      </ModalProvider>
-    </LanguageProvider>
+    <ErrorBoundary>
+      <LanguageProvider>
+        <ModalProvider>
+          <Router>
+            <AppContent />
+          </Router>
+        </ModalProvider>
+      </LanguageProvider>
+    </ErrorBoundary>
   );
 };
 
