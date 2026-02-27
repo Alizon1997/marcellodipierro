@@ -86,7 +86,7 @@ const BookingModal: React.FC = () => {
         closeModal();
         setSuccess(false);
         setFormData({ name: '', email: '', company: '', phone: '' });
-      }, 3000);
+      }, 4000);
     } catch (err: any) {
       console.error('Error submitting form:', err);
       // If the Supabase table doesn't exist yet, still show success
@@ -97,7 +97,7 @@ const BookingModal: React.FC = () => {
           closeModal();
           setSuccess(false);
           setFormData({ name: '', email: '', company: '', phone: '' });
-        }, 3000);
+        }, 4000);
       } else {
         setError(language === 'it' ? 'Si è verificato un errore. Riprova più tardi.' : 'An error occurred. Please try again later.');
       }
@@ -137,16 +137,22 @@ const BookingModal: React.FC = () => {
 
         <div className="p-8">
           {success ? (
-            <div className="flex flex-col items-center justify-center text-center py-10">
-              <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-4 border border-green-500/20">
-                <CheckCircle2 className="w-8 h-8 text-green-500" />
+            <div className="flex flex-col items-center justify-center text-center py-8">
+              {/* Big animated checkmark */}
+              <div className="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-green-500/30 animate-bounce-once">
+                <CheckCircle2 className="w-12 h-12 text-white" />
               </div>
-              <h4 className="text-2xl font-bold text-brand-text mb-2">{language === 'it' ? 'Richiesta Inviata!' : 'Request Sent!'}</h4>
-              <p className="text-brand-muted">
+              <h4 className="text-3xl font-bold text-brand-text mb-3">
+                {language === 'it' ? '✅ Richiesta Inviata!' : '✅ Request Sent!'}
+              </h4>
+              <p className="text-brand-muted text-base max-w-xs">
                 {language === 'it'
                   ? 'Un nostro Senior Strategist ti contatterà entro 24 ore lavorative.'
                   : 'A Senior Strategist will contact you within 24 business hours.'}
               </p>
+              <div className="mt-6 px-5 py-3 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm font-medium">
+                {language === 'it' ? '📧 Controlla la tua email per la conferma' : '📧 Check your email for confirmation'}
+              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
