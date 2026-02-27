@@ -6,7 +6,7 @@ import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 //   WEBHOOK_SECRET   → shared secret between Postgres trigger and this function
 // ─────────────────────────────────────────────────────────────────────────────
 const RESEND_API_KEY   = Deno.env.get("RESEND_API_KEY")   ?? "";
-const NOTIFY_EMAIL     = Deno.env.get("NOTIFY_EMAIL")     ?? "marcello@stormxdigital.com";
+const NOTIFY_EMAIL     = Deno.env.get("NOTIFY_EMAIL")     ?? "marcellodipierro@stormxdigital.com";
 const WEBHOOK_SECRET   = Deno.env.get("WEBHOOK_SECRET")   ?? "";
 
 interface Lead {

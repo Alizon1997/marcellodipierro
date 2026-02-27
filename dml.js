@@ -28,7 +28,7 @@ const readline = require('readline');
 // ── Project constants ─────────────────────────────────────────────────────────
 const PROJECT_REF  = 'buomcjwazcerojfkarub';
 const SUPABASE_URL = `https://${PROJECT_REF}.supabase.co`;
-const NOTIFY_EMAIL = 'marcello@stormxdigital.com'; // change if needed
+const NOTIFY_EMAIL = 'marcellodipierro@stormxdigital.com'; // change if needed
 // ─────────────────────────────────────────────────────────────────────────────
 
 // Generate a strong random secret for the webhook
