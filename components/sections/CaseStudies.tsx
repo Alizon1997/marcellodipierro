@@ -21,6 +21,25 @@ const CaseStudies: React.FC = () => {
               ? 'Tre aziende, tre settori, un unico sistema. Ecco i numeri reali delle nostre campagne outbound multichannel.'
               : 'Three companies, three industries, one system. Real numbers from our multichannel outbound campaigns.'}
           </p>
+
+          {/* Client Logos */}
+          <div className="flex items-center justify-center gap-10 md:gap-16 mt-10">
+            <img
+              src="https://www.isolcore.com/wp-content/uploads/2022/05/isolcore_logo.svg"
+              alt="Isolcore"
+              className="h-6 md:h-7 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
+            />
+            <img
+              src="https://framerusercontent.com/images/8HpawhqwgsiFDddewHyJLUxKA.png"
+              alt="Profood"
+              className="h-8 md:h-10 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
+            />
+            <img
+              src="https://framerusercontent.com/images/BJ6Fr0bDLb18tVizMnSVt7uYzSU.png"
+              alt="Reliance Medical"
+              className="h-7 md:h-9 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
