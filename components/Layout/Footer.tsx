@@ -49,9 +49,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-brand-text text-xs font-bold uppercase tracking-widest mb-5">{language === 'it' ? 'Legale' : 'Legal'}</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-brand-accent transition-colors hover:translate-x-0.5 inline-block">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors hover:translate-x-0.5 inline-block">Cookie Policy</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors hover:translate-x-0.5 inline-block">{language === 'it' ? 'Termini di Servizio' : 'Terms of Service'}</a></li>
+              <li><a href="/privacy" className="hover:text-brand-accent transition-colors hover:translate-x-0.5 inline-block">Privacy Policy</a></li>
+              <li><a href="/cookies" className="hover:text-brand-accent transition-colors hover:translate-x-0.5 inline-block">Cookie Policy</a></li>
+              <li><a href="/terms" className="hover:text-brand-accent transition-colors hover:translate-x-0.5 inline-block">{language === 'it' ? 'Termini di Servizio' : 'Terms of Service'}</a></li>
             </ul>
           </div>
         </div>

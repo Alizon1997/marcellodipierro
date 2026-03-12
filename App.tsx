@@ -5,6 +5,9 @@ import LandingPage from './components/pages/LandingPage';
 import BlogList from './components/blog/BlogList';
 import BlogPost from './components/blog/BlogPost';
 import StudioPage from './components/pages/StudioPage';
+import PrivacyPolicy from './components/pages/PrivacyPolicy';
+import CookiePolicy from './components/pages/CookiePolicy';
+import TermsOfService from './components/pages/TermsOfService';
 import Footer from './components/Layout/Footer';
 import DynamicMeta from './components/SEO/DynamicMeta';
 import { ModalProvider } from './context/ModalContext';
@@ -44,6 +47,9 @@ const AppContent: React.FC = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/cookies" element={<CookiePolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
           <Route path="/studio/*" element={<StudioPage />} />
         </Routes>
       </main>

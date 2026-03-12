@@ -164,7 +164,7 @@ const OfferInfrastructure: React.FC = () => {
                         <ComparisonRow feature={language === 'it' ? 'Tempo di Setup' : 'Setup Time'} internal={language === 'it' ? '3-6 Mesi' : '3-6 Months'} stormx={language === 'it' ? '7-14 Giorni' : '7-14 Days'} />
                         <ComparisonRow feature={language === 'it' ? 'Costo Totale' : 'Cost Stack'} internal={language === 'it' ? '~€4k/mese (Stipendi + Tool)' : '~€4k/mo (Salaries + Tools)'} stormx="All Inclusive" />
                         <ComparisonRow feature={language === 'it' ? 'Gestione' : 'Management'} internal={language === 'it' ? 'Alto Impegno' : 'High Effort'} stormx={language === 'it' ? 'Zero Effort (Gestito)' : 'Zero Effort (Managed)'} />
-                        <ComparisonRow feature={language === 'it' ? 'Rischio' : 'Risk'} internal={language === 'it' ? 'Stipendi Fissi + TFR' : 'Fixed Salaries + Severance'} stormx={language === 'it' ? 'Rimborso del 50% se non soddisfatti' : '50% refund if not satisfied'} isLast />
+                        <ComparisonRow feature={language === 'it' ? 'Rischio' : 'Risk'} internal={language === 'it' ? 'Stipendi Fissi + TFR' : 'Fixed Salaries + Severance'} stormx={language === 'it' ? 'Nessun vincolo — solo Pilot' : 'No commitment — Pilot only'} isLast />
                     </div>
                 </div>
 

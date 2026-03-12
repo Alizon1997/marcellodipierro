@@ -26,7 +26,7 @@ const IT = {
     { value: "120gg", label: "Durata Pilot" },
     { value: "0", label: "Rischio Assunzione" },
     { value: "100%", label: "Proprietà dei Dati" },
-    { value: "5°", label: "Mese Gratis se no risultati" },
+    { value: "14gg", label: "Setup Operativo" },
   ],
   PAIN_POINTS: [
     {
@@ -249,9 +249,9 @@ const IT = {
     }
   ],
   GUARANTEE: {
-    title: "Garanzia di Apprendimento",
-    description: "Il rischio è tutto nostro. Se dopo 120 giorni non ci sono dati chiari e risultati misurabili, lavoriamo gratis il 5° mese fino al raggiungimento dell'obiettivo.",
-    highlight: "lavoriamo gratis il 5° mese"
+    title: "Trasparenza Totale",
+    description: "Nessun vincolo a lungo termine. Lavoriamo con un Pilot di 120 giorni per dimostrare risultati concreti e misurabili prima di qualsiasi impegno continuativo.",
+    highlight: "risultati concreti e misurabili"
   },
   WHATSAPP: {
     label: "Protocollo di Accesso Diretto",
@@ -347,10 +347,10 @@ const IT = {
   MECHANISM_COPY: {
     label: "L'Offerta: Pilot 120 Giorni",
     headline: "Validazione Scientifica in 120 Giorni.",
-    subheadline: "Garanzia di Rimborso.",
+    subheadline: "Zero Vincoli, Solo Risultati.",
     desc: "Perché vincolarsi con contratti annuali o assumere personale interno senza certezze? Il nostro Pilot Program è uno 'Stress-Test' del tuo mercato.",
-    guaranteeTitle: "Garanzia di Risultato",
-    guaranteeDesc: "Non vendiamo tentativi. Se al termine del Pilot (120 giorni) non raggiungiamo i KPI concordati, lavoriamo gratuitamente fino al raggiungimento dell'obiettivo.",
+    guaranteeTitle: "Approccio Data-Driven",
+    guaranteeDesc: "Non vendiamo tentativi. In 120 giorni costruiamo, testiamo e ottimizziamo il tuo motore outbound con KPI chiari e report settimanali.",
     funnelLegend: {
       hot: "Lead Caldi (Meeting)",
       nurture: "Nurture (Database)",
@@ -385,7 +385,7 @@ const IT = {
     bookAnalysis: "Richiedi Analisi Gratuita",
     bookSession: "Richiedi Analisi — Zero Impegno",
     activatePilot: "Blocca il Tuo Posto (1/2 Disponibili)",
-    guarantee: "Garanzia \"Soddisfatti o Rimborsati\" nei primi 14 giorni",
+    guarantee: "Nessun Vincolo a Lungo Termine",
     totalValue: "Valore Totale",
     yourPrice: "Il Tuo Prezzo Pilot",
     month: "/mese",
@@ -393,7 +393,7 @@ const IT = {
     rights: "All Rights Reserved.",
     trustBadge1: "🔒 GDPR Compliant",
     trustBadge2: "✓ Setup in 14 giorni",
-    trustBadge3: "✓ 60+ meeting in 120gg"
+    trustBadge3: "✓ Report Settimanali"
   }
 };
 
@@ -417,7 +417,7 @@ const EN = {
     { value: "120 Days", label: "Pilot Duration" },
     { value: "0", label: "Hiring Risk" },
     { value: "100%", label: "Data Ownership" },
-    { value: "5th", label: "Month Free if no results" },
+    { value: "14 Days", label: "Operational Setup" },
   ],
   PAIN_POINTS: [
     {
@@ -640,9 +640,9 @@ const EN = {
     }
   ],
   GUARANTEE: {
-    title: "Learning Guarantee",
-    description: "The risk is entirely ours. If after 120 days there are no clear data and measurable results, we work for free in the 5th month until the goal is met.",
-    highlight: "we work for free in the 5th month"
+    title: "Full Transparency",
+    description: "No long-term commitments. We work with a 120-day Pilot to demonstrate concrete, measurable results before any ongoing engagement.",
+    highlight: "concrete, measurable results"
   },
   WHATSAPP: {
     label: "Direct Access Protocol",
@@ -738,10 +738,10 @@ const EN = {
   MECHANISM_COPY: {
     label: "The Offer: 120-Day Pilot",
     headline: "Scientific Validation in 120 Days.",
-    subheadline: "Risk-Reversal Guarantee.",
+    subheadline: "Zero Commitments, Only Results.",
     desc: "Why bind yourself to annual contracts or hire internal staff without certainty? Our Pilot Program is a 'Stress-Test' of your market.",
-    guaranteeTitle: "Result Guarantee",
-    guaranteeDesc: "We don't sell attempts. If at the end of the Pilot (120 days) we don't reach the agreed KPIs, we work for free until the goal is achieved.",
+    guaranteeTitle: "Data-Driven Approach",
+    guaranteeDesc: "We don't sell attempts. In 120 days we build, test, and optimize your outbound engine with clear KPIs and weekly reports.",
     funnelLegend: {
       hot: "Hot Leads (Meeting)",
       nurture: "Nurture (Database)",
@@ -775,7 +775,7 @@ const EN = {
     bookAnalysis: "Request Free Analysis",
     bookSession: "Request Analysis — Zero Commitment",
     activatePilot: "Secure Your Spot (1/2 Available)",
-    guarantee: "Money-Back Guarantee in the first 14 days",
+    guarantee: "No Long-Term Commitments",
     totalValue: "Total Value",
     yourPrice: "Your Pilot Price",
     month: "/month",
@@ -783,7 +783,7 @@ const EN = {
     rights: "All Rights Reserved.",
     trustBadge1: "🔒 GDPR Compliant",
     trustBadge2: "✓ Setup in 14 days",
-    trustBadge3: "✓ 60+ meetings in 120 days"
+    trustBadge3: "✓ Weekly Reports"
   }
 };
 

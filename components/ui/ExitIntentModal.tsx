@@ -51,7 +51,7 @@ const ExitIntentModal: React.FC = () => {
         headline: "Aspetta! Stai perdendo l'opportunità di sbloccare la tua pipeline.",
         subheadline: "Prima di andare, scopri in 3 minuti se Storm X è adatto alla tua azienda.",
         benefits: [
-            "Garanzia di risultato",
+            "Approccio data-driven con KPI chiari",
             "Zero rischio — analisi completamente gratuita"
         ],
         cta: "Richiedi Analisi Gratuita",
@@ -60,7 +60,7 @@ const ExitIntentModal: React.FC = () => {
         headline: "Wait! You're about to miss unlocking your pipeline.",
         subheadline: "Before you go, discover in 3 minutes if Storm X is right for your business.",
         benefits: [
-            "Result guarantee",
+            "Data-driven approach with clear KPIs",
             "Zero risk — completely free analysis"
         ],
         cta: "Request Free Analysis",

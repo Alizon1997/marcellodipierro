@@ -52,7 +52,7 @@ const CTA: React.FC = () => {
                 <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-8 text-brand-muted/80">
                     <div className="flex items-center space-x-2 text-sm">
                         <Shield className="w-4 h-4 text-green-500" />
-                        <span>{language === 'it' ? 'Garanzia risultato' : 'Result guarantee'}</span>
+                        <span>{language === 'it' ? 'Zero vincoli' : 'No commitments'}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm">
                         <Clock className="w-4 h-4 text-brand-accent" />
