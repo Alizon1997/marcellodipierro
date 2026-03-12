@@ -149,6 +149,7 @@ const IT = {
     {
       company: "Isolcore",
       logo: "IC",
+      logoUrl: "https://www.isolcore.com/wp-content/uploads/2022/05/isolcore_logo.svg",
       industry: "Isolamento Termico — Edilizia",
       challenge: "Tecnologia superiore ma dipendenza da referral e fiere. Zero pipeline estera, mercato domestico saturo. Nessun processo di outbound strutturato.",
       solution: "Sistema di Outbound multi-mercato: 11 campagne in 6 Paesi (IT, UK, FR, ES, Dubai, NZ). Sequenze multicanale iper-personalizzate con copy multilingua.",
@@ -159,6 +160,7 @@ const IT = {
     {
       company: "Profood",
       logo: "PF",
+      logoUrl: "https://framerusercontent.com/images/8HpawhqwgsiFDddewHyJLUxKA.png",
       industry: "Export Agroalimentare",
       challenge: "Pipeline imprevedibile, crescita solo tramite passaparola e fiere. Obiettivo: aprire nuovi canali in Nord-Europa, Polonia, Middle East e Nuova Zelanda.",
       solution: "4.750 contatti profilati in 9 liste segmentate. Fino a 12 touchpoint per lead (email + LinkedIn + WhatsApp). Missione in presenza a Dubai con buyer Almaya.",
@@ -169,6 +171,7 @@ const IT = {
     {
       company: "Reliance Medical",
       logo: "RM",
+      logoUrl: "https://framerusercontent.com/images/BJ6Fr0bDLb18tVizMnSVt7uYzSU.png",
       industry: "Dispositivi Medici B2B",
       challenge: "Espansione europea bloccata: il piano originale prevedeva 6 export manager (€360K/anno). Cicli di vendita lunghi, decisori multipli, settore conservativo.",
       solution: "Sistema ibrido AI-umano: outreach su 15.000+ prospect in 8 Paesi EU. Email multilingua + LinkedIn + WhatsApp. Supporto diretto ai meeting commerciali.",
@@ -532,6 +535,7 @@ const EN = {
     {
       company: "Isolcore",
       logo: "IC",
+      logoUrl: "https://www.isolcore.com/wp-content/uploads/2022/05/isolcore_logo.svg",
       industry: "Thermal Insulation — Construction",
       challenge: "Superior technology but reliant on referrals and trade shows. Zero international pipeline, saturated domestic market. No structured outbound process.",
       solution: "Multi-market outbound system: 11 campaigns across 6 countries (IT, UK, FR, ES, Dubai, NZ). Hyper-personalized multichannel sequences with native-language copy.",
@@ -542,6 +546,7 @@ const EN = {
     {
       company: "Profood",
       logo: "PF",
+      logoUrl: "https://framerusercontent.com/images/8HpawhqwgsiFDddewHyJLUxKA.png",
       industry: "Fresh Produce Export",
       challenge: "Unpredictable pipeline, growth only through word-of-mouth and trade shows. Goal: open new channels in Northern Europe, Poland, Middle East and New Zealand.",
       solution: "4,750 profiled contacts across 9 segmented lists. Up to 12 touchpoints per lead (email + LinkedIn + WhatsApp). In-person mission to Dubai with Almaya buyer.",
@@ -552,6 +557,7 @@ const EN = {
     {
       company: "Reliance Medical",
       logo: "RM",
+      logoUrl: "https://framerusercontent.com/images/BJ6Fr0bDLb18tVizMnSVt7uYzSU.png",
       industry: "Medical Devices B2B",
       challenge: "European expansion stalled: original plan required 6 export managers (€360K/year). Long sales cycles, multiple decision-makers, conservative industry.",
       solution: "AI-human hybrid system: outreach to 15,000+ prospects across 8 EU countries. Multilingual email + LinkedIn + WhatsApp. Direct support in commercial meetings.",

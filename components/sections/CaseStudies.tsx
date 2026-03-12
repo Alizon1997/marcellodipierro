@@ -22,24 +22,6 @@ const CaseStudies: React.FC = () => {
               : 'Three companies, three industries, one system. Real numbers from our multichannel outbound campaigns.'}
           </p>
 
-          {/* Client Logos */}
-          <div className="flex items-center justify-center gap-10 md:gap-16 mt-10">
-            <img
-              src="https://www.isolcore.com/wp-content/uploads/2022/05/isolcore_logo.svg"
-              alt="Isolcore"
-              className="h-6 md:h-7 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
-            />
-            <img
-              src="https://framerusercontent.com/images/8HpawhqwgsiFDddewHyJLUxKA.png"
-              alt="Profood"
-              className="h-8 md:h-10 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
-            />
-            <img
-              src="https://framerusercontent.com/images/BJ6Fr0bDLb18tVizMnSVt7uYzSU.png"
-              alt="Reliance Medical"
-              className="h-7 md:h-9 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
-            />
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -72,9 +54,15 @@ const CaseStudies: React.FC = () => {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent font-bold text-xs border border-brand-accent/30">
-                      {study.logo}
-                    </div>
+                    {study.logoUrl ? (
+                      <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center border border-brand-border overflow-hidden">
+                        <img src={study.logoUrl} alt={study.company} className="w-7 h-7 object-contain" />
+                      </div>
+                    ) : (
+                      <div className="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent font-bold text-xs border border-brand-accent/30">
+                        {study.logo}
+                      </div>
+                    )}
                     <div>
                       <h4 className="text-base font-bold text-brand-text leading-tight">{study.company}</h4>
                       <span className="text-xs text-brand-muted">{study.industry}</span>
