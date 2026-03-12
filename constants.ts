@@ -10,23 +10,23 @@ const IT = {
   NAV_ITEMS: [
     { label: 'Il Problema', href: '#problema' },
     { label: 'Il Metodo', href: '#metodo' },
-    { label: 'Pilot 90gg', href: '#processo' },
+    { label: 'Pilot 120gg', href: '#processo' },
     { label: 'Casi Studio', href: '#case-studies' },
   ],
   HERO_COPY: {
     badge: "STATO SISTEMA: PRONTO PER SCALARE | Solo 1 posto disponibile questo mese",
     headline: "Smetti di usare i tuoi Senior Sales come stagisti per il Data Entry.",
-    subheadline: "Costruiamo il tuo motore outbound in 90 giorni — 60+ meeting qualificati garantiti, zero rischio di assunzione. Tu chiudi i contratti, noi alimentiamo la pipeline.",
+    subheadline: "Costruiamo il tuo motore outbound in 120 giorni — 60+ meeting qualificati garantiti, zero rischio di assunzione. Tu chiudi i contratti, noi alimentiamo la pipeline.",
     ctaPrimary: "Richiedi Analisi Pipeline (Gratis)",
     ctaSecondary: "Vedi Caso Studio",
     trustText: "✓ Nessuna carta richiesta • ✓ Analisi in 24h • ✓ Zero impegno",
     microTestimonial: "\"Pipeline finalmente costante\" — CEO, SaaS B2B"
   },
   STATS: [
-    { value: "90gg", label: "Durata Pilot" },
+    { value: "120gg", label: "Durata Pilot" },
     { value: "0", label: "Rischio Assunzione" },
     { value: "100%", label: "Proprietà dei Dati" },
-    { value: "4°", label: "Mese Gratis se no risultati" },
+    { value: "5°", label: "Mese Gratis se no risultati" },
   ],
   PAIN_POINTS: [
     {
@@ -114,7 +114,7 @@ const IT = {
     },
     {
       question: "Ci sono vincoli contrattuali a lungo termine?",
-      answer: "No. Non crediamo nei contratti annuali 'alla cieca'. Lavoriamo con un Pilot di 90 giorni (Validazione). Questo ci permette di dimostrare trazione e ROI senza vincolarti per anni. Se il sistema funziona, scaliamo. Se non funziona, non sei bloccato."
+      answer: "No. Non crediamo nei contratti annuali 'alla cieca'. Lavoriamo con un Pilot di 120 giorni (Validazione). Questo ci permette di dimostrare trazione e ROI senza vincolarti per anni. Se il sistema funziona, scaliamo. Se non funziona, non sei bloccato."
     },
     {
       question: "Quali canali di prospecting utilizzate?",
@@ -212,7 +212,7 @@ const IT = {
       isPopular: false
     },
     {
-      name: "Pilot 90",
+      name: "Pilot 120",
       description: "Il nostro best-seller per PMI.",
       features: ["Multicanale (Email+LI+Tel)", "3000+ Lead Lavorati", "Human Caller Italiano", "Garanzia Performance", "CRM Setup"],
       ctaText: "Richiedi Pilot",
@@ -250,8 +250,8 @@ const IT = {
   ],
   GUARANTEE: {
     title: "Garanzia di Apprendimento",
-    description: "Il rischio è tutto nostro. Se dopo 90 giorni non ci sono dati chiari e risultati misurabili, lavoriamo gratis il 4° mese fino al raggiungimento dell'obiettivo.",
-    highlight: "lavoriamo gratis il 4° mese"
+    description: "Il rischio è tutto nostro. Se dopo 120 giorni non ci sono dati chiari e risultati misurabili, lavoriamo gratis il 5° mese fino al raggiungimento dell'obiettivo.",
+    highlight: "lavoriamo gratis il 5° mese"
   },
   WHATSAPP: {
     label: "Protocollo di Accesso Diretto",
@@ -337,15 +337,20 @@ const IT = {
       title: "Fase 3: Scala & Ottimizzazione",
       time: "Giorni 61-90",
       desc: "Isoliamo le variabili vincenti (messaggi, canali, target) e scaliamo i volumi per riempire l'agenda."
+    },
+    {
+      title: "Fase 4: Consolidamento & Crescita",
+      time: "Giorni 91-120",
+      desc: "Consolidiamo le campagne vincenti, espandiamo su nuovi segmenti e costruiamo un processo ripetibile per il tuo team."
     }
   ],
   MECHANISM_COPY: {
-    label: "L'Offerta: Pilot 90 Giorni",
-    headline: "Validazione Scientifica in 90 Giorni.",
+    label: "L'Offerta: Pilot 120 Giorni",
+    headline: "Validazione Scientifica in 120 Giorni.",
     subheadline: "Garanzia di Rimborso.",
     desc: "Perché vincolarsi con contratti annuali o assumere personale interno senza certezze? Il nostro Pilot Program è uno 'Stress-Test' del tuo mercato.",
     guaranteeTitle: "Garanzia di Risultato",
-    guaranteeDesc: "Non vendiamo tentativi. Se al termine del Pilot (90 giorni) non raggiungiamo i KPI concordati, lavoriamo gratuitamente fino al raggiungimento dell'obiettivo.",
+    guaranteeDesc: "Non vendiamo tentativi. Se al termine del Pilot (120 giorni) non raggiungiamo i KPI concordati, lavoriamo gratuitamente fino al raggiungimento dell'obiettivo.",
     funnelLegend: {
       hot: "Lead Caldi (Meeting)",
       nurture: "Nurture (Database)",
@@ -376,7 +381,7 @@ const IT = {
   },
   // Extra UI Strings
   UI: {
-    bookPilot: "Prenota Pilot 90gg",
+    bookPilot: "Prenota Pilot 120gg",
     bookAnalysis: "Richiedi Analisi Gratuita",
     bookSession: "Richiedi Analisi — Zero Impegno",
     activatePilot: "Blocca il Tuo Posto (1/2 Disponibili)",
@@ -388,7 +393,7 @@ const IT = {
     rights: "All Rights Reserved.",
     trustBadge1: "🔒 GDPR Compliant",
     trustBadge2: "✓ Setup in 14 giorni",
-    trustBadge3: "✓ 60+ meeting in 90gg"
+    trustBadge3: "✓ 60+ meeting in 120gg"
   }
 };
 
@@ -396,23 +401,23 @@ const EN = {
   NAV_ITEMS: [
     { label: 'The Problem', href: '#problema' },
     { label: 'The Method', href: '#metodo' },
-    { label: '90-Day Pilot', href: '#processo' },
+    { label: '120-Day Pilot', href: '#processo' },
     { label: 'Case Studies', href: '#case-studies' },
   ],
   HERO_COPY: {
     badge: "SYSTEM STATUS: READY FOR SCALING | Only 1 spot available this month",
     headline: "Stop using your Senior Sales Reps as Data Entry Interns.",
-    subheadline: "We build your outbound engine in 90 days — 60+ qualified meetings guaranteed, zero hiring risk. You focus on closing; we handle the pipeline.",
+    subheadline: "We build your outbound engine in 120 days — 60+ qualified meetings guaranteed, zero hiring risk. You focus on closing; we handle the pipeline.",
     ctaPrimary: "Request Pipeline Analysis (Free)",
     ctaSecondary: "See Case Study",
     trustText: "✓ No card required • ✓ Analysis in 24h • ✓ Zero commitment",
     microTestimonial: "\"Finally a consistent pipeline\" — CEO, B2B SaaS"
   },
   STATS: [
-    { value: "90 Days", label: "Pilot Duration" },
+    { value: "120 Days", label: "Pilot Duration" },
     { value: "0", label: "Hiring Risk" },
     { value: "100%", label: "Data Ownership" },
-    { value: "4th", label: "Month Free if no results" },
+    { value: "5th", label: "Month Free if no results" },
   ],
   PAIN_POINTS: [
     {
@@ -500,7 +505,7 @@ const EN = {
     },
     {
       question: "Are there long-term contractual constraints?",
-      answer: "No. We don't believe in 'blind' annual contracts. We work with a 90-day Pilot (Validation). This allows us to demonstrate traction and ROI without locking you in for years. If the system works, we scale. If it doesn't, you're not stuck."
+      answer: "No. We don't believe in 'blind' annual contracts. We work with a 120-day Pilot (Validation). This allows us to demonstrate traction and ROI without locking you in for years. If the system works, we scale. If it doesn't, you're not stuck."
     },
     {
       question: "Which prospecting channels do you use?",
@@ -598,7 +603,7 @@ const EN = {
       isPopular: false
     },
     {
-      name: "Pilot 90",
+      name: "Pilot 120",
       description: "Our best-seller for SMBs.",
       features: ["Multichannel (Email+LI+Phone)", "3000+ Leads Processed", "Human Caller", "Performance Guarantee", "CRM Setup"],
       ctaText: "Request Pilot",
@@ -636,8 +641,8 @@ const EN = {
   ],
   GUARANTEE: {
     title: "Learning Guarantee",
-    description: "The risk is entirely ours. If after 90 days there are no clear data and measurable results, we work for free in the 4th month until the goal is met.",
-    highlight: "we work for free in the 4th month"
+    description: "The risk is entirely ours. If after 120 days there are no clear data and measurable results, we work for free in the 5th month until the goal is met.",
+    highlight: "we work for free in the 5th month"
   },
   WHATSAPP: {
     label: "Direct Access Protocol",
@@ -723,15 +728,20 @@ const EN = {
       title: "Phase 3: Scale & Optimization",
       time: "Days 61-90",
       desc: "We isolate winning variables (messages, channels, targets) and scale volumes to fill the agenda."
+    },
+    {
+      title: "Phase 4: Consolidation & Growth",
+      time: "Days 91-120",
+      desc: "We consolidate winning campaigns, expand into new segments, and build a repeatable process for your team."
     }
   ],
   MECHANISM_COPY: {
-    label: "The Offer: 90 Days Pilot",
-    headline: "Scientific Validation in 90 Days.",
+    label: "The Offer: 120-Day Pilot",
+    headline: "Scientific Validation in 120 Days.",
     subheadline: "Risk-Reversal Guarantee.",
     desc: "Why bind yourself to annual contracts or hire internal staff without certainty? Our Pilot Program is a 'Stress-Test' of your market.",
     guaranteeTitle: "Result Guarantee",
-    guaranteeDesc: "We don't sell attempts. If at the end of the Pilot (90 days) we don't reach the agreed KPIs, we work for free until the goal is achieved.",
+    guaranteeDesc: "We don't sell attempts. If at the end of the Pilot (120 days) we don't reach the agreed KPIs, we work for free until the goal is achieved.",
     funnelLegend: {
       hot: "Hot Leads (Meeting)",
       nurture: "Nurture (Database)",
@@ -761,7 +771,7 @@ const EN = {
     }
   },
   UI: {
-    bookPilot: "Book 90-Day Pilot",
+    bookPilot: "Book 120-Day Pilot",
     bookAnalysis: "Request Free Analysis",
     bookSession: "Request Analysis — Zero Commitment",
     activatePilot: "Secure Your Spot (1/2 Available)",
@@ -773,7 +783,7 @@ const EN = {
     rights: "All Rights Reserved.",
     trustBadge1: "🔒 GDPR Compliant",
     trustBadge2: "✓ Setup in 14 days",
-    trustBadge3: "✓ 60+ meetings in 90 days"
+    trustBadge3: "✓ 60+ meetings in 120 days"
   }
 };
 

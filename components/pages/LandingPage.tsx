@@ -62,7 +62,7 @@ const LandingPage: React.FC = () => {
         <HowItWorks />
       </Reveal>
 
-      {/* 5. Mechanism: 90 Days Pilot */}
+      {/* 5. Mechanism: 120 Days Pilot */}
       <Reveal>
         <Mechanism />
       </Reveal>

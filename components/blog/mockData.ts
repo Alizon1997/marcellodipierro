@@ -66,8 +66,8 @@ export const MOCK_POSTS: BlogPost[] = [
     },
     {
         _id: "2",
-        title: "Come Scalare una Pipeline B2B in 90 Giorni",
-        slug: { current: "scalare-pipeline-b2b-90-giorni" },
+        title: "Come Scalare una Pipeline B2B in 120 Giorni",
+        slug: { current: "scalare-pipeline-b2b-120-giorni" },
         mainImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
         publishedAt: "2026-01-28T09:00:00Z",
         authorName: "Francesco Monopoli",
