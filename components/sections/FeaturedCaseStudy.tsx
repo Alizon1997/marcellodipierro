@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Globe, TrendingUp, Users, CheckCircle2 } from 'lucide-react';
+import { Download, Globe, TrendingUp, Users, CheckCircle2, BarChart3 } from 'lucide-react';
 import Button from '../ui/Button';
 import { useLanguage } from '../../context/LanguageContext';
 import { TRANSLATIONS } from '../../constants';
@@ -29,59 +29,21 @@ const FeaturedCaseStudy: React.FC = () => {
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-brand-text tracking-tight max-w-3xl">
             {language === 'it'
-              ? <>Da innovatore di nicchia a <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-700">pipeline globale</span> in 9 mesi.</>
-              : <>From niche innovator to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-700">global pipeline</span> in 9 months.</>
+              ? <>Da innovatore di nicchia a <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-orange-400">pipeline globale</span> in 9 mesi.</>
+              : <>From niche innovator to <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-orange-400">global pipeline</span> in 9 months.</>
             }
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
 
-          {/* 2. VIDEO CONTAINER (Left) */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="relative group w-full max-w-[320px]">
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-700/30 to-brand-accent/10 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-700"></div>
-              <div className="relative w-full aspect-[9/16] bg-[#0b141a] rounded-xl border border-white/10 overflow-hidden shadow-2xl flex flex-col items-center justify-center">
-                {/* Grid background */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(0,229,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,229,255,0.04)_1px,transparent_1px)] bg-[size:28px_28px] pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 pointer-events-none"></div>
-                {/* Ambient glow */}
-                <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                {/* Play button */}
-                <div className="relative z-10 flex flex-col items-center text-center px-6 space-y-5">
-                  <div className="w-16 h-16 bg-white/10 backdrop-blur border border-white/20 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-brand-accent/30 transition-all duration-300 shadow-lg">
-                    <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-white font-bold text-sm mb-1">{language === 'it' ? 'Isolcore — Intervista CEO' : 'Isolcore — CEO Interview'}</p>
-                    <p className="text-white/40 text-xs font-mono">{language === 'it' ? 'Disponibile su richiesta' : 'Available on request'}</p>
-                  </div>
-                </div>
-                {/* Video Overlay Badge */}
-                <div className="absolute top-4 left-4 bg-black/60 backdrop-blur border border-white/10 px-3 py-1 rounded-md flex items-center space-x-2 z-20">
-                  <div className="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></div>
-                  <span className="text-[10px] text-white font-mono uppercase">{fc.videoBadge}</span>
-                </div>
-                {/* Bottom metrics strip */}
-                <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur border-t border-white/10 px-4 py-3 z-20">
-                  <div className="flex items-center justify-between">
-                    <span className="text-white/50 text-[9px] font-mono uppercase tracking-wider">Isolcore</span>
-                    <span className="text-cyan-400 text-[10px] font-mono font-bold">+€1M Pipeline</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 3. BRIEFING TEXT (Right) */}
-          <div className="flex flex-col h-full justify-center space-y-8">
+          {/* 2. CHALLENGE & STRATEGY (Left) */}
+          <div className="flex flex-col space-y-8">
             <div>
-              <h3 className="text-brand-text font-bold text-xl mb-1 flex items-center">
+              <h3 className="text-brand-text font-bold text-xl mb-1 flex items-center flex-wrap">
                 {fc.company} <span className="text-brand-muted font-normal text-sm ml-3 border-l border-brand-border pl-3">{fc.subCompany}</span>
               </h3>
-              <p className="text-cyan-400 text-sm font-mono">{fc.sector}</p>
+              <p className="text-brand-accent text-sm font-mono">{fc.sector}</p>
             </div>
 
             <div className="space-y-6">
@@ -98,9 +60,9 @@ const FeaturedCaseStudy: React.FC = () => {
                   {fc.strategyDesc}
                 </p>
                 <ul className="space-y-2">
-                  {fc.points.map((point, idx) => (
-                    <li key={idx} className="flex items-center text-xs text-brand-muted">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2" />
+                  {fc.points.map((point: string, idx: number) => (
+                    <li key={idx} className="flex items-start text-xs text-brand-muted">
+                      <CheckCircle2 className="w-4 h-4 text-brand-accent mr-2 flex-shrink-0 mt-0.5" />
                       {point}
                     </li>
                   ))}
@@ -108,32 +70,89 @@ const FeaturedCaseStudy: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* 3. EXECUTION PHASES (Right) */}
+          <div className="space-y-4">
+            <h4 className="text-brand-text font-bold text-sm uppercase tracking-wide flex items-center mb-2">
+              <BarChart3 className="w-4 h-4 text-brand-accent mr-2" />
+              {language === 'it' ? "Le 4 Fasi del Sistema" : "The 4-Phase System"}
+            </h4>
+            {fc.executionPhases?.map((phase: { title: string; desc: string }, idx: number) => (
+              <div key={idx} className="flex gap-4 group">
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-lg bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent font-mono font-bold text-sm group-hover:bg-brand-accent/20 transition-colors">
+                    {String(idx + 1).padStart(2, '0')}
+                  </div>
+                  {idx < 3 && <div className="w-px h-full bg-brand-border/50 mt-1"></div>}
+                </div>
+                <div className="pb-4">
+                  <h5 className="text-brand-text font-bold text-sm mb-1">{phase.title}</h5>
+                  <p className="text-brand-muted text-xs leading-relaxed">{phase.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* 4. KEY RESULTS GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-
-          {fc.metrics.map((metric, idx) => (
-            <div key={idx} className="bg-brand-surfaceHighlight/50 border border-brand-border p-6 rounded-xl hover:bg-brand-surfaceHighlight transition-colors group">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          {fc.metrics.map((metric: { value: string; label: string }, idx: number) => (
+            <div key={idx} className="bg-brand-surfaceHighlight/50 border border-brand-border p-6 rounded-xl hover:border-brand-accent/30 transition-colors group">
               <div className="flex items-center justify-between mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
-                {idx === 0 && <TrendingUp className="w-5 h-5 text-green-500" />}
-                {idx === 1 && <Users className="w-5 h-5 text-cyan-400" />}
-                {idx === 2 && <Globe className="w-5 h-5 text-brand-text" />}
+                {idx === 0 && <TrendingUp className="w-5 h-5 text-brand-accent" />}
+                {idx === 1 && <Users className="w-5 h-5 text-brand-accent" />}
+                {idx === 2 && <Globe className="w-5 h-5 text-brand-accent" />}
                 {idx === 3 && <CheckCircle2 className="w-5 h-5 text-brand-accent" />}
               </div>
-              <div className={`text-3xl font-mono font-bold mb-1 ${idx === 0 ? 'text-green-500' :
-                idx === 1 ? 'text-cyan-400' :
-                  'text-brand-text'
-                }`}>
+              <div className="text-3xl font-mono font-bold mb-1 text-brand-text group-hover:text-brand-accent transition-colors">
                 {metric.value}
               </div>
               <div className="text-xs text-brand-muted uppercase tracking-wider">{metric.label}</div>
             </div>
           ))}
-
         </div>
 
-        {/* 5. DOWNLOAD CTA */}
+        {/* 5. MARKET DISTRIBUTION */}
+        {fc.marketDistribution && (
+          <div className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-10">
+            <h4 className="text-brand-text font-bold text-sm uppercase tracking-wide mb-5">
+              {language === 'it' ? 'Distribuzione Lead per Mercato' : 'Lead Distribution by Market'}
+            </h4>
+            <div className="space-y-4">
+              {fc.marketDistribution.map((item: { market: string; percentage: number }, idx: number) => (
+                <div key={idx} className="flex items-center gap-4">
+                  <span className="text-brand-text text-sm font-medium w-32 flex-shrink-0">{item.market}</span>
+                  <div className="flex-1 h-3 bg-brand-surfaceHighlight rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-brand-accent to-orange-400 transition-all duration-1000"
+                      style={{ width: `${item.percentage}%` }}
+                    ></div>
+                  </div>
+                  <span className="text-brand-accent font-mono font-bold text-sm w-12 text-right">{item.percentage}%</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* 6. KEY RESULT CALLOUT */}
+        {fc.keyResult && (
+          <div className="bg-brand-accent/5 border border-brand-accent/20 rounded-xl p-6 mb-10">
+            <div className="flex items-start gap-3">
+              <div className="w-1 h-full bg-brand-accent rounded-full flex-shrink-0"></div>
+              <div>
+                <span className="text-brand-accent text-xs font-bold font-mono uppercase tracking-widest">
+                  {language === 'it' ? 'Risultato Chiave' : 'Key Result'}
+                </span>
+                <p className="text-brand-text text-sm leading-relaxed mt-2 font-medium">
+                  {fc.keyResult}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* 7. DOWNLOAD CTA */}
         <div className="flex justify-center">
           <Button variant="outline" className="group border-brand-border text-brand-muted hover:text-brand-text hover:border-brand-accent">
             <Download className="w-4 h-4 mr-2 group-hover:-translate-y-1 transition-transform" />

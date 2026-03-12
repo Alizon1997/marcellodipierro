@@ -147,44 +147,50 @@ const IT = {
   ],
   CASE_STUDIES: [
     {
-      company: "NexTech Solutions",
-      logo: "NX",
-      industry: "SaaS Enterprise",
-      challenge: "Impossibile superare i gatekeeper per parlare con i CIO.",
-      solution: "Sequenza Account-Based (LinkedIn + Direct Mail fisico).",
-      results: ["+40% Tasso Risposta", "Pipeline Milionaria"]
+      company: "Isolcore — UK & Dubai",
+      logo: "UK",
+      industry: "Isolamento Termico B2B",
+      challenge: "Zero presenza nei mercati UK e GCC. Nessun processo strutturato per acquisire distributori internazionali.",
+      solution: "Outreach multicanale post-fiera (London Build + Dubai). Email personalizzate + LinkedIn + WhatsApp con follow-up strutturati su 5-7 touchpoint.",
+      results: ["11 Meeting fissati", "43% Open Rate (UK)", "Accordo quadro con distributore UK"],
+      image: "/case-studies/proof-uk-london.jpg",
+      market: "UK & GCC"
     },
     {
-      company: "Studio Legale Alfa",
-      logo: "AL",
-      industry: "Servizi Professionali",
-      challenge: "Dipendenza totale dal passaparola locale.",
-      solution: "Campagna Email 'Soft-Touch' su aziende target specifiche.",
-      results: ["12 Nuovi Clienti", "Setup in 14gg"]
+      company: "Isolcore — Francia & Spagna",
+      logo: "EU",
+      industry: "Isolamento Termico B2B",
+      challenge: "Mercati europei chiusi: distributori francesi e spagnoli diffidenti verso fornitori sconosciuti.",
+      solution: "Campagne segmentate per distributori e rivenditori. Copy in lingua locale, approccio value-first. Creazione rete di 2 agenti in Spagna e 2 in Francia.",
+      results: ["6 Appuntamenti qualificati", "35% Open Rate (FR)", "4 Distributori in trattativa"],
+      image: "/case-studies/proof-france.jpg",
+      market: "Francia & Spagna"
     },
     {
-      company: "GreenPack",
-      logo: "GP",
-      industry: "Settore Industriale",
-      challenge: "Mercato saturo e guerra dei prezzi.",
-      solution: "Posizionamento consulenziale per educare i Buyer.",
-      results: ["30 Meeting Qualificati", "25% Open Rate"]
+      company: "Isolcore — Italia Tecnici",
+      logo: "IT",
+      industry: "Isolamento Termico B2B",
+      challenge: "Database enorme di ingegneri e studi tecnici italiani, ma nessun sistema per attivarli e convertirli in modo scalabile.",
+      solution: "Campagna email su 2.862 tecnici con sequenze educative sui vantaggi dei pannelli VIP. Gestione lead tramite rappresentanti di zona.",
+      results: ["62% Open Rate", "107 Lead interessati", "58 Appuntamenti / Preventivi"],
+      image: "/case-studies/proof-italy.png",
+      market: "Italia"
     }
   ],
   TESTIMONIALS: [
     {
-      quote: "Prima facevamo cold call a freddo con scarsi risultati. Storm X ci ha portato 18 meeting con Direttori Marketing nel primo mese.",
-      author: "Marco R.",
+      quote: "In 9 mesi Storm X ha trasformato il nostro processo commerciale. Da un modello basato su passaparola a un sistema di outbound scalabile con pipeline da oltre un milione di euro.",
+      author: "Niccolò Z.",
       role: "CEO",
-      company: "SaaS Martech",
-      metric: "+18 Meeting"
+      company: "Isolcore",
+      metric: "+€1M Pipeline"
     },
     {
-      quote: "La qualità dei lead è ciò che ci ha sorpreso. Non perditempo, ma aziende pronte a comprare.",
-      author: "Giulia B.",
-      role: "Sales Director",
-      company: "Logistica",
-      metric: "ROI 4.5x"
+      quote: "La qualità dei contatti è impressionante. Non lead generici, ma decision maker reali pronti a fissare un meeting. In 6 mercati diversi.",
+      author: "Team Commerciale",
+      role: "Sales Team",
+      company: "Isolcore",
+      metric: "97 Lead Qualificati"
     }
   ],
   TIERS: [
@@ -274,21 +280,35 @@ const IT = {
     headline: "Da innovatore di nicchia a pipeline globale in 9 mesi.",
     company: "Isolcore",
     subCompany: "New Zealand Company Srl",
-    sector: "Settore: Deep Tech / Isolamento Termico",
+    sector: "Isolamento Termico & Acustico — Settore Edilizia",
     challengeTitle: "La Sfida",
-    challengeDesc: "Tecnologia superiore, ma presenza limitata al mercato italiano. Obiettivo critico: Aprire mercati B2B in Europa e Medio Oriente senza attendere i tempi biblici del passaparola o delle fiere di settore.",
-    strategyTitle: "La Strategia",
-    strategyDesc: "Outreach Multicanale (LinkedIn + Email + WhatsApp). Abbiamo creato un mix di educazione tecnica (per i CTO) e 'curiosità commerciale' (per i Buyer) per trasformare lead freddi in meeting caldi.",
+    challengeDesc: "Isolcore produce i pannelli isolanti sottovuoto più performanti al mondo (conducibilità termica 0,002 W/mK), ma dipendeva da referral e fiere per generare clienti. Nessun processo strutturato per acquisire distributori internazionali. Mercato domestico saturo, zero pipeline estera.",
+    strategyTitle: "L'Approccio Strategico",
+    strategyDesc: "Sistema di Outbound Sales multi-mercato su tre livelli: profilazione ICP, sequenze multicanale iper-personalizzate (Email + LinkedIn + WhatsApp + Cold Call), gestione e qualificazione risposte in tempo reale.",
     points: [
-      "Mappatura Distributori UK & GCC",
-      "Sequenze 'Account-Based' sui Decision Maker"
+      "Database segmentati per mercato: Italia, UK, Francia, Spagna, Dubai",
+      "Copy multilingua (IT, EN, FR, ES) con approccio value-first",
+      "Follow-up strutturati su 5-7 touchpoint per massimizzare le risposte",
+      "A/B test sistematici su oggetti email, messaggi e CTA"
     ],
     metrics: [
-      { value: "> €1M", label: "Valore Pipeline" },
-      { value: "5.000+", label: "Contatti EU & GCC" },
-      { value: "100%", label: "Conv. Meeting UK" },
-      { value: "5", label: "Accordi Quadro" }
+      { value: "97", label: "Lead Qualificati" },
+      { value: "38%", label: "Tasso di Risposta" },
+      { value: "3x", label: "Pipeline Commerciale" },
+      { value: "218%", label: "Crescita Ricavi" }
     ],
+    executionPhases: [
+      { title: "Target & Data Intelligence", desc: "Database segmentati per vertical (costruttori, progettisti, distributori) in Italia ed Europa. Profilazione dei decision maker B2B." },
+      { title: "Copywriting & Sequenze", desc: "Sequenze email e LinkedIn personalizzate per ogni segmento e mercato, con messaggi in italiano, inglese, francese e tedesco." },
+      { title: "Outreach & Gestione", desc: "Lancio campagne settimanali con monitoring in tempo reale. Qualificazione lead e handoff al team commerciale per la chiusura." },
+      { title: "Ottimizzazione & Reporting", desc: "A/B test sistematici, report bisettimanali con insight su mercati e segmenti. Dashboard condivisa con KPI in tempo reale." }
+    ],
+    marketDistribution: [
+      { market: "Italia", percentage: 52 },
+      { market: "Europa", percentage: 33 },
+      { market: "Mercati Globali", percentage: 15 }
+    ],
+    keyResult: "Isolcore ha trasformato il proprio processo commerciale da un modello basato su referral a un sistema di outbound scalabile e misurabile, aprendo opportunità concrete in mercati precedentemente inesplorati.",
     cta: "Scarica il Caso Studio Completo (PDF)",
     videoBadge: "Intervista Live"
   },
@@ -503,44 +523,50 @@ const EN = {
   ],
   CASE_STUDIES: [
     {
-      company: "NexTech Solutions",
-      logo: "NX",
-      industry: "SaaS Enterprise",
-      challenge: "Impossible to bypass gatekeepers to speak with CIOs.",
-      solution: "Account-Based Sequence (LinkedIn + Physical Direct Mail).",
-      results: ["+40% Response Rate", "Million Dollar Pipeline"]
+      company: "Isolcore — UK & Dubai",
+      logo: "UK",
+      industry: "Thermal Insulation B2B",
+      challenge: "Zero presence in UK and GCC markets. No structured process to acquire international distributors.",
+      solution: "Multichannel post-trade-show outreach (London Build + Dubai). Personalized emails + LinkedIn + WhatsApp with structured 5-7 touchpoint follow-ups.",
+      results: ["11 Meetings booked", "43% Open Rate (UK)", "Framework deal with UK distributor"],
+      image: "/case-studies/proof-uk-london.jpg",
+      market: "UK & GCC"
     },
     {
-      company: "Studio Legale Alfa",
-      logo: "AL",
-      industry: "Professional Services",
-      challenge: "Total dependence on local word of mouth.",
-      solution: "'Soft-Touch' Email Campaign on specific target companies.",
-      results: ["12 New Clients", "Setup in 14 days"]
+      company: "Isolcore — France & Spain",
+      logo: "EU",
+      industry: "Thermal Insulation B2B",
+      challenge: "Closed European markets: French and Spanish distributors wary of unknown suppliers.",
+      solution: "Segmented campaigns for distributors and resellers. Native-language copy, value-first approach. Built agent networks: 2 in Spain, 2 in France.",
+      results: ["6 Qualified appointments", "35% Open Rate (FR)", "4 Distributors in negotiation"],
+      image: "/case-studies/proof-france.jpg",
+      market: "France & Spain"
     },
     {
-      company: "GreenPack",
-      logo: "GP",
-      industry: "Industrial Sector",
-      challenge: "Saturated market and price war.",
-      solution: "Consultative positioning to educate Buyers.",
-      results: ["30 Qualified Meetings", "25% Open Rate"]
+      company: "Isolcore — Italy Engineers",
+      logo: "IT",
+      industry: "Thermal Insulation B2B",
+      challenge: "Huge database of Italian engineers and technical firms, but no scalable system to activate and convert them.",
+      solution: "Email campaign to 2,862 engineers with educational sequences on VIP panel advantages. Lead management through regional representatives.",
+      results: ["62% Open Rate", "107 Interested leads", "58 Appointments / Quotes"],
+      image: "/case-studies/proof-italy.png",
+      market: "Italy"
     }
   ],
   TESTIMONIALS: [
     {
-      quote: "Before we were cold calling with poor results. Storm X brought us 18 meetings with Marketing Directors in the first month.",
-      author: "Mark R.",
+      quote: "In 9 months Storm X transformed our sales process. From a word-of-mouth model to a scalable outbound system with a pipeline exceeding one million euros.",
+      author: "Niccolo Z.",
       role: "CEO",
-      company: "SaaS Martech",
-      metric: "+18 Meetings"
+      company: "Isolcore",
+      metric: "+€1M Pipeline"
     },
     {
-      quote: "The quality of the leads is what surprised us. Not time wasters, but companies ready to buy.",
-      author: "Julia B.",
-      role: "Sales Director",
-      company: "Logistics",
-      metric: "ROI 4.5x"
+      quote: "The quality of contacts is impressive. Not generic leads, but real decision makers ready to schedule a meeting. Across 6 different markets.",
+      author: "Sales Team",
+      role: "Sales Team",
+      company: "Isolcore",
+      metric: "97 Qualified Leads"
     }
   ],
   TIERS: [
@@ -630,21 +656,35 @@ const EN = {
     headline: "From niche innovator to global pipeline in 9 months.",
     company: "Isolcore",
     subCompany: "New Zealand Company Srl",
-    sector: "Sector: Deep Tech / Thermal Insulation",
+    sector: "Thermal & Acoustic Insulation — Construction Sector",
     challengeTitle: "The Challenge",
-    challengeDesc: "Superior technology, but limited presence in the Italian market. Critical goal: Open B2B markets in Europe and the Middle East without waiting for word-of-mouth or trade shows.",
-    strategyTitle: "The Strategy",
-    strategyDesc: "Multichannel Outreach (LinkedIn + Email + WhatsApp). We created a mix of technical education (for CTOs) and 'commercial curiosity' (for Buyers) to turn cold leads into hot meetings.",
+    challengeDesc: "Isolcore produces the world's most performant vacuum insulation panels (thermal conductivity 0.002 W/mK), but relied on referrals and trade shows for client acquisition. No structured process for international distributors. Saturated domestic market, zero foreign pipeline.",
+    strategyTitle: "The Strategic Approach",
+    strategyDesc: "Multi-market Outbound Sales system on three levels: ICP profiling, hyper-personalized multichannel sequences (Email + LinkedIn + WhatsApp + Cold Call), real-time response management and qualification.",
     points: [
-      "Distributor Mapping UK & GCC",
-      "'Account-Based' Sequences on Decision Makers"
+      "Segmented databases by market: Italy, UK, France, Spain, Dubai",
+      "Multilingual copy (IT, EN, FR, ES) with value-first approach",
+      "Structured 5-7 touchpoint follow-ups to maximize responses",
+      "Systematic A/B testing on email subjects, messages and CTAs"
     ],
     metrics: [
-      { value: "> €1M", label: "Pipeline Value" },
-      { value: "5.000+", label: "Contacts EU & GCC" },
-      { value: "100%", label: "UK Meeting Conv." },
-      { value: "5", label: "Framework Agreements" }
+      { value: "97", label: "Qualified Leads" },
+      { value: "38%", label: "Response Rate" },
+      { value: "3x", label: "Sales Pipeline" },
+      { value: "218%", label: "Revenue Growth" }
     ],
+    executionPhases: [
+      { title: "Target & Data Intelligence", desc: "Segmented databases by vertical (builders, designers, distributors) across Italy and Europe. Deep profiling of B2B decision makers." },
+      { title: "Copywriting & Sequences", desc: "Personalized email and LinkedIn sequences for each segment and market, with messages in Italian, English, French and German." },
+      { title: "Outreach & Management", desc: "Weekly campaign launches with real-time monitoring. Lead qualification and handoff to the sales team for closing." },
+      { title: "Optimization & Reporting", desc: "Systematic A/B testing, bi-weekly reports with market and segment insights. Shared dashboard with real-time KPIs." }
+    ],
+    marketDistribution: [
+      { market: "Italy", percentage: 52 },
+      { market: "Europe", percentage: 33 },
+      { market: "Global Markets", percentage: 15 }
+    ],
+    keyResult: "Isolcore transformed its sales process from a referral-based model to a scalable, measurable outbound system, opening concrete opportunities in previously unexplored markets.",
     cta: "Download Full Case Study (PDF)",
     videoBadge: "Live Interview"
   },
