@@ -147,34 +147,34 @@ const IT = {
   ],
   CASE_STUDIES: [
     {
-      company: "Isolcore — UK & Dubai",
-      logo: "UK",
-      industry: "Isolamento Termico B2B",
-      challenge: "Zero presenza nei mercati UK e GCC. Nessun processo strutturato per acquisire distributori internazionali.",
-      solution: "Outreach multicanale post-fiera (London Build + Dubai). Email personalizzate + LinkedIn + WhatsApp con follow-up strutturati su 5-7 touchpoint.",
-      results: ["11 Meeting fissati", "43% Open Rate (UK)", "Accordo quadro con distributore UK"],
+      company: "Isolcore",
+      logo: "IC",
+      industry: "Isolamento Termico — Edilizia",
+      challenge: "Tecnologia superiore ma dipendenza da referral e fiere. Zero pipeline estera, mercato domestico saturo. Nessun processo di outbound strutturato.",
+      solution: "Sistema di Outbound multi-mercato: 11 campagne in 6 Paesi (IT, UK, FR, ES, Dubai, NZ). Sequenze multicanale iper-personalizzate con copy multilingua.",
+      results: ["97 Lead Qualificati in 9 mesi", "38% Tasso di Risposta", "Pipeline >€1M", "218% Crescita Ricavi"],
       image: "/case-studies/proof-uk-london.jpg",
-      market: "UK & GCC"
+      market: "Italia · Europa · GCC"
     },
     {
-      company: "Isolcore — Francia & Spagna",
-      logo: "EU",
-      industry: "Isolamento Termico B2B",
-      challenge: "Mercati europei chiusi: distributori francesi e spagnoli diffidenti verso fornitori sconosciuti.",
-      solution: "Campagne segmentate per distributori e rivenditori. Copy in lingua locale, approccio value-first. Creazione rete di 2 agenti in Spagna e 2 in Francia.",
-      results: ["6 Appuntamenti qualificati", "35% Open Rate (FR)", "4 Distributori in trattativa"],
-      image: "/case-studies/proof-france.jpg",
-      market: "Francia & Spagna"
+      company: "Profood",
+      logo: "PF",
+      industry: "Export Agroalimentare",
+      challenge: "Pipeline imprevedibile, crescita solo tramite passaparola e fiere. Obiettivo: aprire nuovi canali in Nord-Europa, Polonia, Middle East e Nuova Zelanda.",
+      solution: "4.750 contatti profilati in 9 liste segmentate. Fino a 12 touchpoint per lead (email + LinkedIn + WhatsApp). Missione in presenza a Dubai con buyer Almaya.",
+      results: ["7.129 Email inviate", "34,6% Open Rate", "11 Meeting confermati", "59 Lead attivi in pipeline"],
+      image: "",
+      market: "EU · Middle East · NZ"
     },
     {
-      company: "Isolcore — Italia Tecnici",
-      logo: "IT",
-      industry: "Isolamento Termico B2B",
-      challenge: "Database enorme di ingegneri e studi tecnici italiani, ma nessun sistema per attivarli e convertirli in modo scalabile.",
-      solution: "Campagna email su 2.862 tecnici con sequenze educative sui vantaggi dei pannelli VIP. Gestione lead tramite rappresentanti di zona.",
-      results: ["62% Open Rate", "107 Lead interessati", "58 Appuntamenti / Preventivi"],
-      image: "/case-studies/proof-italy.png",
-      market: "Italia"
+      company: "Reliance Medical",
+      logo: "RM",
+      industry: "Dispositivi Medici B2B",
+      challenge: "Espansione europea bloccata: il piano originale prevedeva 6 export manager (€360K/anno). Cicli di vendita lunghi, decisori multipli, settore conservativo.",
+      solution: "Sistema ibrido AI-umano: outreach su 15.000+ prospect in 8 Paesi EU. Email multilingua + LinkedIn + WhatsApp. Supporto diretto ai meeting commerciali.",
+      results: ["€4.5M Pipeline generata", "€300K Ordini convertiti", "450+ Prospect qualificati", "€360K/anno risparmiati"],
+      image: "",
+      market: "8 Paesi EU"
     }
   ],
   TESTIMONIALS: [
@@ -186,11 +186,18 @@ const IT = {
       metric: "+€1M Pipeline"
     },
     {
-      quote: "La qualità dei contatti è impressionante. Non lead generici, ma decision maker reali pronti a fissare un meeting. In 6 mercati diversi.",
-      author: "Team Commerciale",
+      quote: "Stavamo per assumere 6 export manager con un investimento di €360K annui. Invece, gestiamo opportunità in 12 Paesi europei con maggiore efficacia e una frazione dei costi.",
+      author: "Thomas Pear",
+      role: "Managing Director",
+      company: "Reliance Medical",
+      metric: "€4.5M Pipeline"
+    },
+    {
+      quote: "In 90 giorni abbiamo ottenuto 11 meeting con buyer internazionali e 18 offerte inviate. Il sistema funziona anche per chi esporta prodotti freschi con cicli stagionali.",
+      author: "Team Vendite",
       role: "Sales Team",
-      company: "Isolcore",
-      metric: "97 Lead Qualificati"
+      company: "Profood",
+      metric: "11 Meeting in 90gg"
     }
   ],
   TIERS: [
@@ -523,50 +530,57 @@ const EN = {
   ],
   CASE_STUDIES: [
     {
-      company: "Isolcore — UK & Dubai",
-      logo: "UK",
-      industry: "Thermal Insulation B2B",
-      challenge: "Zero presence in UK and GCC markets. No structured process to acquire international distributors.",
-      solution: "Multichannel post-trade-show outreach (London Build + Dubai). Personalized emails + LinkedIn + WhatsApp with structured 5-7 touchpoint follow-ups.",
-      results: ["11 Meetings booked", "43% Open Rate (UK)", "Framework deal with UK distributor"],
+      company: "Isolcore",
+      logo: "IC",
+      industry: "Thermal Insulation — Construction",
+      challenge: "Superior technology but reliant on referrals and trade shows. Zero international pipeline, saturated domestic market. No structured outbound process.",
+      solution: "Multi-market outbound system: 11 campaigns across 6 countries (IT, UK, FR, ES, Dubai, NZ). Hyper-personalized multichannel sequences with native-language copy.",
+      results: ["97 Qualified Leads in 9 months", "38% Reply Rate", "Pipeline >€1M", "218% Revenue Growth"],
       image: "/case-studies/proof-uk-london.jpg",
-      market: "UK & GCC"
+      market: "Italy · Europe · GCC"
     },
     {
-      company: "Isolcore — France & Spain",
-      logo: "EU",
-      industry: "Thermal Insulation B2B",
-      challenge: "Closed European markets: French and Spanish distributors wary of unknown suppliers.",
-      solution: "Segmented campaigns for distributors and resellers. Native-language copy, value-first approach. Built agent networks: 2 in Spain, 2 in France.",
-      results: ["6 Qualified appointments", "35% Open Rate (FR)", "4 Distributors in negotiation"],
-      image: "/case-studies/proof-france.jpg",
-      market: "France & Spain"
+      company: "Profood",
+      logo: "PF",
+      industry: "Fresh Produce Export",
+      challenge: "Unpredictable pipeline, growth only through word-of-mouth and trade shows. Goal: open new channels in Northern Europe, Poland, Middle East and New Zealand.",
+      solution: "4,750 profiled contacts across 9 segmented lists. Up to 12 touchpoints per lead (email + LinkedIn + WhatsApp). In-person mission to Dubai with Almaya buyer.",
+      results: ["7,129 Emails sent", "34.6% Open Rate", "11 Meetings confirmed", "59 Active leads in pipeline"],
+      image: "",
+      market: "EU · Middle East · NZ"
     },
     {
-      company: "Isolcore — Italy Engineers",
-      logo: "IT",
-      industry: "Thermal Insulation B2B",
-      challenge: "Huge database of Italian engineers and technical firms, but no scalable system to activate and convert them.",
-      solution: "Email campaign to 2,862 engineers with educational sequences on VIP panel advantages. Lead management through regional representatives.",
-      results: ["62% Open Rate", "107 Interested leads", "58 Appointments / Quotes"],
-      image: "/case-studies/proof-italy.png",
-      market: "Italy"
+      company: "Reliance Medical",
+      logo: "RM",
+      industry: "Medical Devices B2B",
+      challenge: "European expansion stalled: original plan required 6 export managers (€360K/year). Long sales cycles, multiple decision-makers, conservative industry.",
+      solution: "AI-human hybrid system: outreach to 15,000+ prospects across 8 EU countries. Multilingual email + LinkedIn + WhatsApp. Direct support in commercial meetings.",
+      results: ["€4.5M Pipeline generated", "€300K Orders converted", "450+ Qualified prospects", "€360K/year saved"],
+      image: "",
+      market: "8 EU Countries"
     }
   ],
   TESTIMONIALS: [
     {
       quote: "In 9 months Storm X transformed our sales process. From a word-of-mouth model to a scalable outbound system with a pipeline exceeding one million euros.",
-      author: "Niccolo Z.",
+      author: "Niccolò Z.",
       role: "CEO",
       company: "Isolcore",
       metric: "+€1M Pipeline"
     },
     {
-      quote: "The quality of contacts is impressive. Not generic leads, but real decision makers ready to schedule a meeting. Across 6 different markets.",
+      quote: "We were about to hire 6 export managers at €360K per year. Instead, we chose innovation and today we manage opportunities in 12 European countries with greater effectiveness at a fraction of the cost.",
+      author: "Thomas Pear",
+      role: "Managing Director",
+      company: "Reliance Medical",
+      metric: "€4.5M Pipeline"
+    },
+    {
+      quote: "From zero international outbound to 11 confirmed meetings and 59 active leads in 90 days. The multichannel approach opened doors we couldn't reach through trade shows alone.",
       author: "Sales Team",
-      role: "Sales Team",
-      company: "Isolcore",
-      metric: "97 Qualified Leads"
+      role: "Commercial Direction",
+      company: "Profood",
+      metric: "34.6% Open Rate"
     }
   ],
   TIERS: [

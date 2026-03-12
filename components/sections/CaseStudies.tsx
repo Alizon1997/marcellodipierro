@@ -18,8 +18,8 @@ const CaseStudies: React.FC = () => {
           </h3>
           <p className="text-brand-muted max-w-2xl mx-auto">
             {language === 'it'
-              ? 'Ecco i numeri reali delle campagne outbound per Isolcore — pannelli isolanti sottovuoto, 6 mercati, 9 mesi.'
-              : 'Real numbers from outbound campaigns for Isolcore — vacuum insulation panels, 6 markets, 9 months.'}
+              ? 'Tre aziende, tre settori, un unico sistema. Ecco i numeri reali delle nostre campagne outbound multichannel.'
+              : 'Three companies, three industries, one system. Real numbers from our multichannel outbound campaigns.'}
           </p>
         </div>
 
@@ -108,19 +108,19 @@ const CaseStudies: React.FC = () => {
         <div className="mt-12 bg-brand-surface border border-brand-border rounded-xl p-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-2xl font-mono font-bold text-brand-accent">5.000+</div>
+              <div className="text-2xl font-mono font-bold text-brand-accent">22.000+</div>
               <div className="text-xs text-brand-muted uppercase tracking-wider mt-1">{language === 'it' ? 'Contatti Lavorati' : 'Contacts Processed'}</div>
             </div>
             <div>
-              <div className="text-2xl font-mono font-bold text-brand-accent">11</div>
-              <div className="text-xs text-brand-muted uppercase tracking-wider mt-1">{language === 'it' ? 'Campagne Attive' : 'Active Campaigns'}</div>
+              <div className="text-2xl font-mono font-bold text-brand-accent">3</div>
+              <div className="text-xs text-brand-muted uppercase tracking-wider mt-1">{language === 'it' ? 'Clienti Attivi' : 'Active Clients'}</div>
             </div>
             <div>
-              <div className="text-2xl font-mono font-bold text-brand-accent">6</div>
+              <div className="text-2xl font-mono font-bold text-brand-accent">16+</div>
               <div className="text-xs text-brand-muted uppercase tracking-wider mt-1">{language === 'it' ? 'Mercati Aperti' : 'Markets Opened'}</div>
             </div>
             <div>
-              <div className="text-2xl font-mono font-bold text-brand-accent">&gt;€1M</div>
+              <div className="text-2xl font-mono font-bold text-brand-accent">&gt;€5.5M</div>
               <div className="text-xs text-brand-muted uppercase tracking-wider mt-1">{language === 'it' ? 'Pipeline Generata' : 'Pipeline Generated'}</div>
             </div>
           </div>
