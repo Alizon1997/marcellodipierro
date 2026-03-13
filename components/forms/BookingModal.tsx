@@ -135,7 +135,7 @@ const BookingModal: React.FC = () => {
           </button>
         </div>
 
-        <div className="p-8">
+        <div className="p-5 sm:p-8">
           {success ? (
             <div className="flex flex-col items-center justify-center text-center py-8">
               {/* Big animated checkmark */}
@@ -156,7 +156,7 @@ const BookingModal: React.FC = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <label className="text-xs font-mono text-brand-muted uppercase">
                     {language === 'it' ? 'Nome Completo' : 'Full Name'}

@@ -12,7 +12,7 @@ const Mechanism: React.FC = () => {
   return (
     <section id="processo" className="py-20 md:py-32 bg-brand-dark relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             
             {/* Left: Text & Steps */}
             <div className="lg:col-span-5">
@@ -65,7 +65,7 @@ const Mechanism: React.FC = () => {
 
             {/* Right: Funnel Animation (Expanded Width) */}
             <div className="lg:col-span-7 flex items-center justify-center">
-                <div className="relative w-full h-[600px] bg-brand-surface/20 border border-brand-border/30 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative w-full h-[350px] sm:h-[450px] md:h-[500px] lg:h-[600px] bg-brand-surface/20 border border-brand-border/30 rounded-2xl overflow-hidden shadow-2xl">
                     <div className="absolute inset-0 bg-brand-dark/50"></div>
                     
                     {/* The Canvas Component */}
@@ -88,8 +88,8 @@ const Mechanism: React.FC = () => {
                     </div>
                     
                     {/* Bottom Status Bar */}
-                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-brand-surface border-t border-brand-border flex items-center px-4 justify-between z-20">
-                        <div className="flex items-center space-x-4 text-[10px] font-mono text-brand-muted">
+                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-brand-surface border-t border-brand-border flex items-center px-2 sm:px-4 justify-between z-20">
+                        <div className="flex items-center space-x-2 sm:space-x-4 text-[10px] font-mono text-brand-muted">
                             <span>{MECHANISM_COPY.funnelLegend.system}</span>
                             <span>LATENCY: 12ms</span>
                         </div>

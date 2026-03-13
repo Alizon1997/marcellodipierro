@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   const t = TRANSLATIONS[language];
 
   return (
-    <section id="hero" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-dark transition-colors duration-300">
+    <section id="hero" className="relative pt-24 pb-14 md:pt-32 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-dark transition-colors duration-300">
       {/* Subtle dot-grid background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(0,0,0,0.07)_1px,_transparent_1px)] bg-[size:28px_28px] pointer-events-none opacity-60" />
       {/* Background Ambience with Parallax */}
@@ -111,20 +111,20 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Right Column: Visual - Radar System */}
-          <div className="lg:col-span-6 relative animate-fade-up [animation-delay:600ms] h-[500px] md:h-[600px] w-full flex items-center justify-center">
+          <div className="lg:col-span-6 relative animate-fade-up [animation-delay:600ms] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full flex items-center justify-center">
             <RadarCanvas />
 
             {/* Background glow for the whole system */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-blue/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[500px] md:h-[500px] bg-brand-blue/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
           </div>
 
         </div>
 
         {/* Bottom Metrics Bar */}
-        <div className="mt-20 border-t border-brand-border pt-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mt-10 md:mt-20 border-t border-brand-border pt-4 md:pt-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {t.STATS.map((stat, idx) => (
             <div key={idx} className="flex flex-col border-l-2 border-brand-accent/30 pl-5 group hover:border-brand-accent transition-colors duration-300">
-              <span className="text-2xl font-mono font-bold text-brand-text tracking-tight group-hover:text-brand-accent transition-colors duration-300">{stat.value}</span>
+              <span className="text-xl md:text-2xl font-mono font-bold text-brand-text tracking-tight group-hover:text-brand-accent transition-colors duration-300">{stat.value}</span>
               <span className="text-xs text-brand-muted font-semibold uppercase tracking-wider mt-1">{stat.label}</span>
             </div>
           ))}

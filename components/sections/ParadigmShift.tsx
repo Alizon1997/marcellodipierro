@@ -11,9 +11,9 @@ const ParadigmShift: React.FC = () => {
   const { PARADIGM_SHIFT } = t;
 
   return (
-    <section className="py-24 bg-brand-surface border-y border-brand-border relative">
+    <section className="py-14 md:py-24 bg-brand-surface border-y border-brand-border relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             
             {/* Left: Manifesto Copy */}
             <div>
@@ -36,7 +36,7 @@ const ParadigmShift: React.FC = () => {
                 <div ref={glowRef} className="absolute -inset-4 bg-brand-accent/5 blur-3xl rounded-full will-change-transform"></div>
                 
                 {/* Flowchart Container */}
-                <div className="relative bg-brand-dark border border-brand-border rounded-2xl p-8 shadow-2xl flex flex-col space-y-8">
+                <div className="relative bg-brand-dark border border-brand-border rounded-2xl p-5 sm:p-8 shadow-2xl flex flex-col space-y-8">
                     <h4 className="text-center text-xs font-mono uppercase tracking-widest text-brand-muted mb-2">{PARADIGM_SHIFT.flowchartTitle}</h4>
                     
                     {/* Step 1: Input */}
@@ -53,7 +53,7 @@ const ParadigmShift: React.FC = () => {
                     </div>
 
                     {/* Step 2: Channels (Horizontal Flow) */}
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-3 relative">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 relative">
                         {/* Connecting Line for Desktop */}
                         <div className="hidden md:block absolute top-1/2 left-0 w-full h-px bg-brand-border -z-10"></div>
 

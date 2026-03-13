@@ -41,7 +41,7 @@ const LogoCloud: React.FC = () => {
                     {/* Scrolling track — overflow-clip-margin lets tooltips escape */}
                     <div className="overflow-hidden" style={{ paddingBottom: '60px', marginBottom: '-60px' }}>
                         <div
-                            className="flex items-center gap-12 md:gap-16 lg:gap-20 animate-marquee group-hover/marquee:[animation-play-state:paused]"
+                            className="flex items-center gap-6 sm:gap-8 md:gap-12 lg:gap-20 animate-marquee group-hover/marquee:[animation-play-state:paused]"
                             style={{ width: 'max-content' }}
                         >
                             {allPartners.map((partner, idx) => (
@@ -54,7 +54,7 @@ const LogoCloud: React.FC = () => {
                                     <img
                                         src={partner.logo}
                                         alt={`${partner.name} logo`}
-                                        className="h-8 md:h-10 w-auto object-contain grayscale brightness-150 contrast-125 hover:grayscale-0 hover:brightness-100 transition-all duration-500 cursor-pointer hover:scale-110"
+                                        className="h-6 sm:h-8 md:h-10 w-auto object-contain grayscale brightness-150 contrast-125 hover:grayscale-0 hover:brightness-100 transition-all duration-500 cursor-pointer hover:scale-110"
                                     />
                                     {/* Tooltip */}
                                     <div

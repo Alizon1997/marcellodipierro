@@ -88,7 +88,7 @@ const ExitIntentModal: React.FC = () => {
                     <X className="w-5 h-5" />
                 </button>
 
-                <div className="p-8 md:p-10">
+                <div className="p-5 sm:p-8 md:p-10">
                     {/* Icon */}
                     <div className="w-14 h-14 bg-brand-accent/10 border border-brand-accent/30 rounded-xl flex items-center justify-center mb-6 mx-auto">
                         <Shield className="w-7 h-7 text-brand-accent" />

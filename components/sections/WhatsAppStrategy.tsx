@@ -70,9 +70,9 @@ const WhatsAppStrategy: React.FC = () => {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-brand-dark border-t border-brand-border overflow-hidden">
+    <section ref={sectionRef} className="py-14 md:py-24 bg-brand-dark border-t border-brand-border overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* Left Column: Strategy Copy */}
           <div className="order-2 lg:order-1">
@@ -112,7 +112,7 @@ const WhatsAppStrategy: React.FC = () => {
 
           {/* Right Column: 3D Phone Animation */}
           <div className="order-1 lg:order-2 flex justify-center perspective-1000">
-            <div className="relative w-[300px] h-[600px] bg-brand-surface border-[8px] border-[#2A2B35] rounded-[3rem] shadow-2xl overflow-hidden transform rotate-y-[-10deg] hover:rotate-y-0 transition-transform duration-500 shadow-glow-lg">
+            <div className="relative w-[260px] h-[520px] sm:w-[300px] sm:h-[600px] bg-brand-surface border-[8px] border-[#2A2B35] rounded-[3rem] shadow-2xl overflow-hidden transform rotate-y-[-10deg] hover:rotate-y-0 transition-transform duration-500 shadow-glow-lg">
 
               {/* Phone Notch/Status Bar */}
               <div className="absolute top-0 left-0 right-0 h-6 bg-[#2A2B35] z-30 flex justify-center rounded-b-xl mx-16">

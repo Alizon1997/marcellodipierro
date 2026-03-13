@@ -10,7 +10,7 @@ const FeaturedCaseStudy: React.FC = () => {
   const fc = t.FEATURED_CASE;
 
   return (
-    <section className="py-24 bg-brand-dark border-t border-brand-border relative overflow-hidden">
+    <section className="py-14 md:py-24 bg-brand-dark border-t border-brand-border relative overflow-hidden">
       {/* Background Tech Mesh */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
@@ -35,7 +35,7 @@ const FeaturedCaseStudy: React.FC = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-start mb-10 md:mb-16">
 
           {/* 2. CHALLENGE & STRATEGY (Left) */}
           <div className="flex flex-col space-y-8">
@@ -78,7 +78,7 @@ const FeaturedCaseStudy: React.FC = () => {
               {language === 'it' ? "Le 4 Fasi del Sistema" : "The 4-Phase System"}
             </h4>
             {fc.executionPhases?.map((phase: { title: string; desc: string }, idx: number) => (
-              <div key={idx} className="flex gap-4 group">
+              <div key={idx} className="flex gap-2 sm:gap-3 md:gap-4 group">
                 <div className="flex flex-col items-center">
                   <div className="w-10 h-10 rounded-lg bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent font-mono font-bold text-sm group-hover:bg-brand-accent/20 transition-colors">
                     {String(idx + 1).padStart(2, '0')}
@@ -95,16 +95,16 @@ const FeaturedCaseStudy: React.FC = () => {
         </div>
 
         {/* 4. KEY RESULTS GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 mb-8 md:mb-10">
           {fc.metrics.map((metric: { value: string; label: string }, idx: number) => (
-            <div key={idx} className="bg-brand-surfaceHighlight/50 border border-brand-border p-6 rounded-xl hover:border-brand-accent/30 transition-colors group">
+            <div key={idx} className="bg-brand-surfaceHighlight/50 border border-brand-border p-4 sm:p-6 rounded-xl hover:border-brand-accent/30 transition-colors group">
               <div className="flex items-center justify-between mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
                 {idx === 0 && <TrendingUp className="w-5 h-5 text-brand-accent" />}
                 {idx === 1 && <Users className="w-5 h-5 text-brand-accent" />}
                 {idx === 2 && <Globe className="w-5 h-5 text-brand-accent" />}
                 {idx === 3 && <CheckCircle2 className="w-5 h-5 text-brand-accent" />}
               </div>
-              <div className="text-3xl font-mono font-bold mb-1 text-brand-text group-hover:text-brand-accent transition-colors">
+              <div className="text-2xl sm:text-3xl font-mono font-bold mb-1 text-brand-text group-hover:text-brand-accent transition-colors">
                 {metric.value}
               </div>
               <div className="text-xs text-brand-muted uppercase tracking-wider">{metric.label}</div>
@@ -121,7 +121,7 @@ const FeaturedCaseStudy: React.FC = () => {
             <div className="space-y-4">
               {fc.marketDistribution.map((item: { market: string; percentage: number }, idx: number) => (
                 <div key={idx} className="flex items-center gap-4">
-                  <span className="text-brand-text text-sm font-medium w-32 flex-shrink-0">{item.market}</span>
+                  <span className="text-brand-text text-xs sm:text-sm font-medium w-20 sm:w-32 flex-shrink-0">{item.market}</span>
                   <div className="flex-1 h-3 bg-brand-surfaceHighlight rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-brand-accent to-orange-400 transition-all duration-1000"

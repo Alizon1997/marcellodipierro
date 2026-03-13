@@ -9,9 +9,9 @@ const CaseStudies: React.FC = () => {
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
 
   return (
-    <section id="case-studies" className="py-20 bg-brand-dark">
+    <section id="case-studies" className="py-12 md:py-20 bg-brand-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-xs font-bold font-mono text-brand-accent uppercase tracking-widest mb-3">{language === 'it' ? 'Campagne Reali' : 'Real Campaigns'}</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-brand-text mb-4">
             {language === 'it' ? 'Risultati misurabili, mercato per mercato.' : 'Measurable results, market by market.'}
@@ -24,7 +24,7 @@ const CaseStudies: React.FC = () => {
 
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
           {t.CASE_STUDIES.map((study: any, idx: number) => (
             <div key={idx} className="flex flex-col bg-brand-surface border border-brand-border rounded-2xl overflow-hidden hover:border-brand-accent/40 transition-all duration-300 group hover:shadow-glow">
               {/* Proof Image */}

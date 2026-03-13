@@ -8,7 +8,7 @@ const HowItWorks: React.FC = () => {
   const t = TRANSLATIONS[language];
 
   return (
-    <section id="metodo" className="py-24 bg-brand-dark relative border-t border-brand-border overflow-hidden">
+    <section id="metodo" className="py-14 md:py-24 bg-brand-dark relative border-t border-brand-border overflow-hidden">
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-7xl pointer-events-none opacity-40">
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-accent/5 rounded-full blur-[120px]"></div>
@@ -17,7 +17,7 @@ const HowItWorks: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-10 md:mb-20">
           <h2 className="text-xs font-bold font-mono text-brand-accent uppercase tracking-widest mb-3">
             {language === 'it' ? 'Il Nostro Processo' : 'Our Process'}
           </h2>

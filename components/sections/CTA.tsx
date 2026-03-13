@@ -13,7 +13,7 @@ const CTA: React.FC = () => {
     const t = TRANSLATIONS[language];
 
     return (
-        <section className="py-28 relative overflow-hidden bg-brand-dark border-t border-brand-border">
+        <section className="py-16 md:py-28 relative overflow-hidden bg-brand-dark border-t border-brand-border">
             {/* Background dot grid */}
             <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(0,0,0,0.06)_1px,_transparent_1px)] bg-[size:24px_24px] pointer-events-none opacity-50" />
             {/* Glow Effects */}
@@ -29,7 +29,7 @@ const CTA: React.FC = () => {
                     </span>
                 </div>
 
-                <h2 className="text-5xl md:text-6xl font-bold text-brand-text mb-6 leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-text mb-6 leading-tight">
                     {language === 'it' ? (
                         <>
                             L'Inbound è passivo.<br />
@@ -42,7 +42,7 @@ const CTA: React.FC = () => {
                         </>
                     )}
                 </h2>
-                <p className="text-xl text-brand-muted mb-10 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-brand-muted mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed">
                     {language === 'it'
                         ? "Riprendi il controllo del tuo fatturato. Non accettiamo tutti. Lavoriamo solo con aziende B2B che hanno la capacità di gestire i volumi che generiamo."
                         : "Take back control of your revenue. We don't accept everyone. We only work with B2B companies that have the capacity to handle the volume we generate."}

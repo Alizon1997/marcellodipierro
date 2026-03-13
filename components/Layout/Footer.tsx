@@ -8,12 +8,12 @@ const Footer: React.FC = () => {
   const t = TRANSLATIONS[language];
 
   return (
-    <footer className="bg-brand-dark text-brand-muted py-16 border-t border-brand-border relative overflow-hidden">
+    <footer className="bg-brand-dark text-brand-muted py-10 md:py-16 border-t border-brand-border relative overflow-hidden">
       {/* Subtle background accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-brand-accent/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 mb-10 md:mb-14">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-2 mb-5">
               <Logo className="h-10 w-auto" />

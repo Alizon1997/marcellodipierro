@@ -15,10 +15,10 @@ const Team: React.FC = () => {
   const t = TRANSLATIONS[language];
 
   return (
-    <section id="team" className="py-20 bg-brand-dark border-t border-brand-border">
+    <section id="team" className="py-12 md:py-20 bg-brand-dark border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-text mb-4">
             {language === 'it' ? 'L\'Infrastruttura Umana.' : 'Human Infrastructure.'}
           </h2>
@@ -31,7 +31,7 @@ const Team: React.FC = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {t.TEAM.map((member, idx) => (
             <div key={idx} className="group relative">
               {/* Image Container */}

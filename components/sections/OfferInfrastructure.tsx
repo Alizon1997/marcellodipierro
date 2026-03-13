@@ -69,14 +69,14 @@ const ComparisonRow: React.FC<{
     stormx: string;
     isLast?: boolean;
 }> = ({ feature, internal, stormx, isLast }) => (
-    <div className={`grid grid-cols-3 text-sm ${!isLast ? 'border-b border-brand-border' : ''}`}>
-        <div className="p-4 font-medium text-brand-text flex items-center bg-brand-surfaceHighlight/40">
+    <div className={`grid grid-cols-3 text-xs sm:text-sm ${!isLast ? 'border-b border-brand-border' : ''}`}>
+        <div className="p-2 sm:p-3 md:p-4 font-medium text-brand-text flex items-center bg-brand-surfaceHighlight/40">
             {feature}
         </div>
-        <div className="p-4 text-brand-muted flex items-center border-l border-brand-border">
+        <div className="p-2 sm:p-3 md:p-4 text-brand-muted flex items-center border-l border-brand-border">
             {internal}
         </div>
-        <div className="p-4 font-semibold text-brand-text flex items-center border-l border-brand-border bg-brand-accent/5">
+        <div className="p-2 sm:p-3 md:p-4 font-semibold text-brand-text flex items-center border-l border-brand-border bg-brand-accent/5">
             <Check className="w-4 h-4 text-brand-accent mr-2 shrink-0" />
             {stormx}
         </div>
@@ -89,7 +89,7 @@ const OfferInfrastructure: React.FC = () => {
     const features = getFeatureData(language);
 
     return (
-        <section id="offerta" className="py-20 bg-brand-surface border-t border-brand-border">
+        <section id="offerta" className="py-12 md:py-20 bg-brand-surface border-t border-brand-border">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
@@ -108,7 +108,7 @@ const OfferInfrastructure: React.FC = () => {
                 </div>
 
                 {/* 3-Column Value Grid */}
-                <div className="grid md:grid-cols-3 gap-8 mb-20">
+                <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-20">
 
                     {/* Column 1: Human */}
                     <div className="bg-brand-surface border border-brand-border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-blue-300/50 transition-all">
@@ -156,9 +156,9 @@ const OfferInfrastructure: React.FC = () => {
                     <div className="bg-brand-surface border border-brand-border rounded-xl overflow-hidden shadow-sm">
                         {/* Table Header */}
                         <div className="grid grid-cols-3 bg-brand-surfaceHighlight border-b border-brand-border text-xs font-bold text-brand-muted uppercase tracking-wider">
-                            <div className="p-4">{language === 'it' ? 'Caratteristica' : 'Feature'}</div>
-                            <div className="p-4 border-l border-brand-border">{language === 'it' ? 'Assunzione Interna' : 'Internal Hiring'}</div>
-                            <div className="p-4 border-l border-brand-border text-brand-accent">Storm X Infra</div>
+                            <div className="p-2 sm:p-3 md:p-4">{language === 'it' ? 'Caratteristica' : 'Feature'}</div>
+                            <div className="p-2 sm:p-3 md:p-4 border-l border-brand-border">{language === 'it' ? 'Assunzione Interna' : 'Internal Hiring'}</div>
+                            <div className="p-2 sm:p-3 md:p-4 border-l border-brand-border text-brand-accent">Storm X Infra</div>
                         </div>
 
                         <ComparisonRow feature={language === 'it' ? 'Tempo di Setup' : 'Setup Time'} internal={language === 'it' ? '3-6 Mesi' : '3-6 Months'} stormx={language === 'it' ? '7-14 Giorni' : '7-14 Days'} />
@@ -170,7 +170,7 @@ const OfferInfrastructure: React.FC = () => {
 
                 {/* Guarantees & CTA */}
                 <div className="text-center">
-                    <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 text-sm font-medium text-brand-muted">
+                    <div className="flex flex-wrap justify-center gap-3 md:gap-8 mb-8 md:mb-10 text-sm font-medium text-brand-muted">
                         <span className="flex items-center gap-2 px-3 py-1.5 bg-green-50 text-green-700 rounded-full border border-green-100">
                             <Check className="w-4 h-4" /> {language === 'it' ? 'Protezione No-Show' : 'No-Show Protection'}
                         </span>

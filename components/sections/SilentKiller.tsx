@@ -30,7 +30,7 @@ const SilentKiller: React.FC = () => {
     }, []);
 
     return (
-        <section id="problema" className="py-20 bg-brand-dark relative overflow-hidden" ref={sectionRef}>
+        <section id="problema" className="py-12 md:py-20 bg-brand-dark relative overflow-hidden" ref={sectionRef}>
             <div className="absolute inset-0 bg-brand-accent/5 pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -54,7 +54,7 @@ const SilentKiller: React.FC = () => {
                 </div>
 
                 {/* Main 2-column layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-start mb-10 md:mb-16">
                     {/* Left Column: Pain Point Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 order-2 lg:order-1">
                         {t.PAIN_POINTS.map((pain, idx) => (
@@ -76,7 +76,7 @@ const SilentKiller: React.FC = () => {
                     </div>
 
                     {/* Right Column: Donut Chart Card */}
-                    <div className={`bg-brand-surface border border-brand-border rounded-2xl p-8 shadow-xl relative overflow-hidden order-1 lg:order-2 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                    <div className={`bg-brand-surface border border-brand-border rounded-2xl p-5 sm:p-8 shadow-xl relative overflow-hidden order-1 lg:order-2 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                         }`} style={{ transitionDelay: isVisible ? '200ms' : '0ms' }}>
                         {/* Parallax Blob */}
                         <div ref={blobRef} className="absolute top-0 right-0 w-32 h-32 bg-brand-accent/10 rounded-full blur-3xl will-change-transform"></div>

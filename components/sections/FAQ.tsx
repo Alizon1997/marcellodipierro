@@ -8,7 +8,7 @@ const FAQ: React.FC = () => {
   const t = TRANSLATIONS[language];
 
   return (
-    <section id="faq" className="py-24 bg-brand-dark border-t border-brand-border relative overflow-hidden">
+    <section id="faq" className="py-14 md:py-24 bg-brand-dark border-t border-brand-border relative overflow-hidden">
       {/* Ambient background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-20">
          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-accent/5 rounded-full blur-[100px]"></div>
@@ -17,7 +17,7 @@ const FAQ: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
            <div className="inline-flex items-center justify-center p-2 bg-brand-surfaceHighlight rounded-full mb-4 border border-brand-border">
               <HelpCircle className="w-5 h-5 text-brand-accent" />
            </div>

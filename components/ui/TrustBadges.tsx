@@ -19,7 +19,7 @@ const TrustBadges: React.FC<TrustBadgesProps> = ({ variant = 'horizontal', class
     ];
 
     return (
-        <div className={`flex ${variant === 'horizontal' ? 'flex-row items-center space-x-4' : 'flex-col space-y-2'} ${className}`}>
+        <div className={`flex ${variant === 'horizontal' ? 'flex-row flex-wrap items-center gap-x-4 gap-y-1' : 'flex-col space-y-2'} ${className}`}>
             {badges.map((badge, idx) => {
                 const Icon = badge.icon;
                 return (
