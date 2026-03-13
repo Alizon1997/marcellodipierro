@@ -154,7 +154,7 @@ const IT = {
       challenge: "Tecnologia superiore ma dipendenza da referral e fiere. Zero pipeline estera, mercato domestico saturo. Nessun processo di outbound strutturato.",
       solution: "Sistema di Outbound multi-mercato: 11 campagne in 6 Paesi (IT, UK, FR, ES, Dubai, NZ). Sequenze multicanale iper-personalizzate con copy multilingua.",
       results: ["97 Lead Qualificati in 9 mesi", "38% Tasso di Risposta", "Pipeline >€1M", "218% Crescita Ricavi"],
-      image: "/case-studies/proof-uk-london.jpg",
+      image: "",
       market: "Italia · Europa · GCC"
     },
     {
@@ -545,7 +545,7 @@ const EN = {
       challenge: "Superior technology but reliant on referrals and trade shows. Zero international pipeline, saturated domestic market. No structured outbound process.",
       solution: "Multi-market outbound system: 11 campaigns across 6 countries (IT, UK, FR, ES, Dubai, NZ). Hyper-personalized multichannel sequences with native-language copy.",
       results: ["97 Qualified Leads in 9 months", "38% Reply Rate", "Pipeline >€1M", "218% Revenue Growth"],
-      image: "/case-studies/proof-uk-london.jpg",
+      image: "",
       market: "Italy · Europe · GCC"
     },
     {
